@@ -95,7 +95,7 @@ export default function Home() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
 
   // Move video down more in final state
-  const y = useTransform(scrollYProgress, [0, 0.5], [40, 470]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [40, 750]);
 
   // Move video left in initial state, then center in final
   const x = useTransform(scrollYProgress, [0, 0.5], [70, 0]);
@@ -111,10 +111,10 @@ export default function Home() {
 
   return (
     <div>
-      <section className=" min-h-[200vh] md:p-15 pl-2 pr-2 pt-10 bg-white md:w-full relative">
-        <div className="h-[80px] flex  md:px-5 px-5 relative">
+      <section className=" container min-h-[200vh] md:p-10 pl-5 pr-5 pt-10 bg-white w-full relative">
+        <div className="h-[100px] flex  md:px-5 px-5 relative">
           <motion.div
-            className="md:w-full md:max-w-[600px] flex flex-col gap-4 z-4"
+            className="w-full max-w-[600px] flex flex-col gap-4 z-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{
               opacity: 1,
@@ -138,7 +138,7 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <h1 className="md:text-[60px] sm:text-[40px] text-[30px] font-semibold text-black leading-tight">
+              <h1 className="md:text-[50px] sm:text-[40px] text-[30px] font-semibold text-black leading-tight">
                 Powering every part of your accounting operations.
               </h1>
               <p className="md:text-[18px] sm:text-[15px] text-[12px] text-gray-600">
@@ -149,13 +149,13 @@ export default function Home() {
                 <button className="bg-white text-black px-6 py-2 rounded-3xl font-medium shadow-md hover:shadow-lg transition-shadow">
                   Book a Demo
                 </button>
-                <MoveRight className="mr-2 text-white" />
+                <MoveRight className="mr-4 text-white" />
               </div>
             </div>
           </motion.div>
 
           <motion.div
-            className="absolute right-3 top-0 md:overflow-hidden  "
+            className="absolute right-3 top-0 overflow-hidden "
             style={{
               scale,
               y,
@@ -171,15 +171,15 @@ export default function Home() {
               loop
               muted
               playsInline
-              className="md:w-full h-full object-cover   "
+              className="w-full h-full object-cover  "
             >
               <source src="/nature.mp4" type="video/mp4" />
             </video>
           </motion.div>
         </div>
       </section> 
-      <div className="container md:mx-auto overflow-hidden mygradient mb-20  ">
-        <div className="flex justify-center border-2 gap-9 ">
+      <div className="container mx-auto overflow-hidden mygradient  ">
+        <div className="flex justify-center gap-9 ">
           <motion.div
             className="flex flex-shrink-0 h-[50px] gap-9 justify-center  "
             initial={{ x: 0 }}

@@ -81,7 +81,7 @@ function Proposals() {
           </div>
         </motion.div>
         <motion.div
-          className="w-1/2 bg-amber-800"
+          className="md:w-1/2 w-full bg-amber-800"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{  duration: 0.8, ease: "easeOut"  }}

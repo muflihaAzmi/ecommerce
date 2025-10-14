@@ -15,13 +15,13 @@ function Build() {
 
   return (
     <div>
-      <div className=" ">
-        <div className="md:flex justify-center  ">
+      <div className=" mt-10">
+        <div className="flex justify-center  ">
           <p className="text-black md:text-[30px] ">
             Built to automate the everyday
           </p>
         </div>
-        <div className="md:flex justify-center mt-5">
+        <div className="flex justify-center mt-5 ">
           <div className="flex rounded-3xl border justify-center items-center w-68 border-gray-400 bg-gray-200 text-gray-400 px-2 text-[10px]">
             <button
               onClick={() => setCurrentpage("proposals")}
