@@ -1,13 +1,17 @@
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@radix-ui/react-collapsible'
-import { ChevronsDown, MoveRight } from 'lucide-react'
-import { motion } from 'motion/react'
-import React from 'react'
-import Image from 'next/image'
+import { ChevronsDown, MoveRight } from "lucide-react";
+import React from "react";
+import Image from "next/image";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { motion } from "motion/react";
 
-function Contracts() {
+function Proposals() {
   return (
     <div>
-         <div className="w-full md:px-30 mt-10 flex md:flex-row flex-col gap-4 px-10 ">
+      <div className=" min-h-screen w-full md:px-30 mt-10 flex md:flex-row flex-col gap-4 px-5 ">
         <motion.div className="md:p-5 bg-gray-100 md:w-1/2 w-full p-2"  initial={{y:40 ,opacity:0}}
         animate={{y:0,opacity:1}}
         transition={{ duration: 0.8, ease: "easeOut" }}>
@@ -77,22 +81,21 @@ function Contracts() {
           </div>
         </motion.div>
         <motion.div
-          className="md:w-1/2 w-full"
+          className="md:w-1/2 w-full bg-amber-800"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{  duration: 0.8, ease: "easeOut" }}
+          transition={{  duration: 0.8, ease: "easeOut"  }}
         >
           <Image
-            src ="/contract.avif"
-            alt="contracts"
+            src="/proposals.avif"
+            alt="proposals"
             width={650}
-            height={200}
+            height={0}
           />
-            
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Contracts
+export default Proposals;

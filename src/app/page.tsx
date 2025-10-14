@@ -2,6 +2,7 @@
 import { MoveRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Build from "./homepage/page";
+import MainPacked from "./comppage2/mainpacked";
 
 export default function Home() {
   const slider = [
@@ -92,26 +93,26 @@ export default function Home() {
   const { scrollYProgress } = useScroll();
 
   // Scale up smoothly
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.1], [0.8, 1]);
 
   // Move video down more in final state
-  const y = useTransform(scrollYProgress, [0, 0.5], [40, 750]);
+  const y = useTransform(scrollYProgress, [0, 0.1], [40, 450]);
 
   // Move video left in initial state, then center in final
-  const x = useTransform(scrollYProgress, [0, 0.5], [70, 0]);
+  const x = useTransform(scrollYProgress, [0, 0.1], [70, 0]);
 
   // Expand width to full
-  const width = useTransform(scrollYProgress, [0, 0.5], ["45%", "100%"]);
+  const width = useTransform(scrollYProgress, [0, 0.1], ["45%", "100%"]);
 
   // Expand height
-  const height = useTransform(scrollYProgress, [0, 0.5], ["300px", "600px"]);
+  const height = useTransform(scrollYProgress, [0, 0.1], ["300px", "700px"]);
 
   // Adjust border radius (optional - makes it go from rounded to sharp)
   // const borderRadius = useTransform(scrollYProgress, [0, 0.5], [24, 0]);
 
   return (
     <div>
-      <section className=" container min-h-[200vh] md:p-10 pl-5 pr-5 pt-10 bg-white w-full relative">
+      <section className=" container min-h-[200vh] md:p-20  pr-5 pt-10 bg-white w-full relative">
         <div className="h-[100px] flex  md:px-5 px-5 relative">
           <motion.div
             className="w-full max-w-[600px] flex flex-col gap-4 z-4"
@@ -178,7 +179,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section> 
-      <div className="container mx-auto overflow-hidden mygradient  ">
+      <div className="container mx-auto overflow-hidden mygradient">
         <div className="flex justify-center gap-9 ">
           <motion.div
             className="flex flex-shrink-0 h-[50px] gap-9 justify-center  "
@@ -204,6 +205,8 @@ export default function Home() {
         </div>
       </div>
       <Build/>
+      <MainPacked/>
+     
      
     </div>
   );

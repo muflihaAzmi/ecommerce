@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { Poppins } from "next/font/google";
-import Proposals from "./components/proposol";
-import Contracts from "./components/contracts";
-import Retainers from "./components/retainers";
-import Meetings from "./components/meetings";
+import Proposals from "./componentspage1/proposol";
+import Contracts from "./componentspage1/contracts";
+import Retainers from "./componentspage1/retainers";
+import Meetings from "./componentspage1/meetings";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["700"], // normal, semi-bold, bold
@@ -15,7 +15,7 @@ function Build() {
 
   return (
     <div>
-      <div className=" mt-10">
+      <div className=" mt-30 ">
         <div className="flex justify-center  ">
           <p className="text-black md:text-[30px] ">
             Built to automate the everyday
