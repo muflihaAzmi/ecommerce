@@ -1,103 +1,210 @@
-import Image from "next/image";
+"use client";
+import { MoveRight } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Build from "./homepage/page";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const slider = [
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+  
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/apple.png",
+    "/dev.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    "/whatsapp.png",
+    "/chat-gpt.png",
+    "/ubuntu.png",
+    "/twitter.png",
+    
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const { scrollYProgress } = useScroll();
+
+  // Scale up smoothly
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
+
+  // Move video down more in final state
+  const y = useTransform(scrollYProgress, [0, 0.5], [40, 470]);
+
+  // Move video left in initial state, then center in final
+  const x = useTransform(scrollYProgress, [0, 0.5], [70, 0]);
+
+  // Expand width to full
+  const width = useTransform(scrollYProgress, [0, 0.5], ["45%", "100%"]);
+
+  // Expand height
+  const height = useTransform(scrollYProgress, [0, 0.5], ["300px", "600px"]);
+
+  // Adjust border radius (optional - makes it go from rounded to sharp)
+  // const borderRadius = useTransform(scrollYProgress, [0, 0.5], [24, 0]);
+
+  return (
+    <div>
+      <section className=" min-h-[200vh] md:p-15 pl-2 pr-2 pt-10 bg-white md:w-full relative">
+        <div className="h-[80px] flex  md:px-5 px-5 relative">
+          <motion.div
+            className="md:w-full md:max-w-[600px] flex flex-col gap-4 z-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{ duration: 1 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className="flex flex-row bg-white border border-gray-200 rounded-3xl w-60 gap-2 justify-center items-center ">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" />
+              </svg>
+              <p className="text-black text-[15px] font-medium">
+                BEST BUSINESS WEBSITE
+              </p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h1 className="md:text-[60px] sm:text-[40px] text-[30px] font-semibold text-black leading-tight">
+                Powering every part of your accounting operations.
+              </h1>
+              <p className="md:text-[18px] sm:text-[15px] text-[12px] text-gray-600">
+                Built by entrepreneurs just like you to provide a better
+                accounting solution for small businesses.
+              </p>
+              <div className="bg-black w-[220px] h-12 px-1 flex items-center rounded-3xl shadow-lg mt-4 flex-row justify-between">
+                <button className="bg-white text-black px-6 py-2 rounded-3xl font-medium shadow-md hover:shadow-lg transition-shadow">
+                  Book a Demo
+                </button>
+                <MoveRight className="mr-2 text-white" />
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="absolute right-3 top-0 md:overflow-hidden  "
+            style={{
+              scale,
+              y,
+              x,
+              width,
+              height,
+              // borderRadius,
+              zIndex: 5,
+            }}
           >
-            Read our docs
-          </a>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="md:w-full h-full object-cover   "
+            >
+              <source src="/nature.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section> 
+      <div className="container md:mx-auto overflow-hidden mygradient mb-20  ">
+        <div className="flex justify-center border-2 gap-9 ">
+          <motion.div
+            className="flex flex-shrink-0 h-[50px] gap-9 justify-center  "
+            initial={{ x: 0 }}
+            animate={{ x: "-50%" }}
+            transition={{ duration: 20, repeat: Infinity, ease:"linear" }}
+          >
+            {slider.map((logo, index) => {
+              return <img src={logo} key={index}></img>;
+            })}
+          </motion.div>
+          <motion.div
+            className="flex flex-shrink-0 h-[50px] gap-9 justify-center  "
+            initial={{ x: 0 }}
+            animate={{ x: "-50%" }}
+            transition={{ duration: 20, repeat: Infinity, ease:"linear" }}
+          >
+            {slider.map((logo, index) => {
+              return <img src={logo} key={index}></img>;
+            })}
+          </motion.div>
+        
+        </div>
+      </div>
+      <Build/>
+     
     </div>
   );
 }
