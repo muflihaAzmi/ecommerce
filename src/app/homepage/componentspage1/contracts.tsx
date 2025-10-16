@@ -7,7 +7,7 @@ import Image from 'next/image'
 function Contracts() {
   return (
     <div>
-         <div className="w-full md:px-30  flex md:flex-row flex-col gap-4  ">
+         <div className="w-full md:px-30  flex md:flex-row flex-col gap-4 mt-10 ">
         <motion.div className="md:p-5 bg-gray-100 md:w-1/2 w-full p-2"  initial={{y:40 ,opacity:0}}
         animate={{y:0,opacity:1}}
         transition={{ duration: 0.8, ease: "easeOut" }}>

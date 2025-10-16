@@ -3,6 +3,11 @@ import { MoveRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Build from "./homepage/page";
 import MainPacked from "./comppage2/mainpacked";
+import Stack from "./comppage3/stack";
+import Bannertoggle from "./comppage3/bannertoggle";
+import Deliver from "./comppage3/Deliver";
+import Packed from "./comppage3/packed";
+import Customer from "./comppage3/customer";
 
 export default function Home() {
   const slider = [
@@ -111,8 +116,9 @@ export default function Home() {
   // const borderRadius = useTransform(scrollYProgress, [0, 0.5], [24, 0]);
 
   return (
-    <div>
-      <section className=" container min-h-[200vh] md:p-20  pr-5 pt-10 bg-white w-full relative">
+    <div >
+      <div className=" w-full ">
+      <section className="container mx-auto  min-h-[200vh] md:p-20  pr-5 pt-10 bg-white  relative">
         <div className="h-[100px] flex  md:px-5 px-5 relative">
           <motion.div
             className="w-full max-w-[600px] flex flex-col gap-4 z-4"
@@ -178,7 +184,11 @@ export default function Home() {
             </video>
           </motion.div>
         </div>
+  
       </section> 
+            </div>
+
+      
       <div className="container mx-auto overflow-hidden mygradient">
         <div className="flex justify-center gap-9 ">
           <motion.div
@@ -206,7 +216,11 @@ export default function Home() {
       </div>
       <Build/>
       <MainPacked/>
-     
+      <Stack/>
+      <Bannertoggle/>
+      <Deliver/>
+      <Packed/>
+     <Customer/>
      
     </div>
   );

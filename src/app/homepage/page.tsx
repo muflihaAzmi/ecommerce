@@ -7,22 +7,22 @@ import Retainers from "./componentspage1/retainers";
 import Meetings from "./componentspage1/meetings";
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["700"], // normal, semi-bold, bold
+  weight: ["700"],
 });
 
 function Build() {
   const [Currentpage, setCurrentpage] = useState("proposals");
 
   return (
-    <div>
-      <div className=" mt-30 ">
+    <div className="">
+      <div className=" container mx-auto mt-30 ">
         <div className="flex justify-center  ">
-          <p className="text-black md:text-[30px] ">
+          <p className="text-black md:text-[35px] ">
             Built to automate the everyday
           </p>
         </div>
         <div className="flex justify-center mt-5 ">
-          <div className="flex rounded-3xl border justify-center items-center w-68 border-gray-400 bg-gray-200 text-gray-400 px-2 text-[10px]">
+          <div className="flex rounded-3xl border justify-center items-center  w-68 border-gray-400 bg-gray-200 text-gray-400 px-2 text-[10px]">
             <button
               onClick={() => setCurrentpage("proposals")}
               className={`px-2  py-1 ${

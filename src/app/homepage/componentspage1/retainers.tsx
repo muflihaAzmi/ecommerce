@@ -85,7 +85,7 @@ function retainers() {
           <Image
             src ="/retainers.avif"
             alt="retainers"
-            width={6500}
+            width={650}
             height={200}
           />
         </motion.div>

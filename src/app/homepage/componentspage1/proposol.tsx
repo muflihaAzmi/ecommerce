@@ -9,14 +9,20 @@ import {
 import { motion } from "motion/react";
 
 function Proposals() {
+  const MotionImage = motion(Image);
+
   return (
     <div>
       <div className=" min-h-screen w-full md:px-30 mt-10 flex md:flex-row flex-col gap-4 px-5 ">
-        <motion.div className="md:p-5 bg-gray-100 md:w-1/2 w-full p-2"  initial={{y:40 ,opacity:0}}
-        animate={{y:0,opacity:1}}
-        transition={{ duration: 0.8, ease: "easeOut" }}>
+        <motion.div
+          className="md:p-5 bg-gray-100 md:w-1/2 h-[600px] w-full p-2"
+          initial={{ opacity: 0, y: 50 }} // invisible & moved down
+          whileInView={{ opacity: 1, y: 0 }} // visible & back to place
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="w-full  flex flex-col  gap-4  ">
-            <span className="text-black font-semibold text-[18px]">
+            <span className="text-black font-semibold text-[20px]">
               Commercial and specialty insurers
             </span>
             <p className="text-gray-500 text-[15px] w-full md:w-3/4">
@@ -30,7 +36,7 @@ function Proposals() {
               </button>
               <MoveRight className="mr-4 text-black" />
             </div>
-            <div  className="mt-5">
+            <div className="mt-5">
               <Collapsible>
                 <div className=" border-t-2 border-b-2 py-4 w-full">
                   <CollapsibleTrigger className="flex justify-between text-[15px] w-full ">
@@ -80,20 +86,16 @@ function Proposals() {
             </div>
           </div>
         </motion.div>
-        <motion.div
-          className="md:w-1/2 w-full bg-amber-800"
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{  duration: 0.8, ease: "easeOut"  }}
+        <motion.div  className="origin-top "
+          initial={{ scaleY: 0, opacity: 0 }}
+          whileInView={{ scaleY: 1, opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          <Image
-            src="/proposals.avif"
-            alt="proposals"
-            width={650}
-            height={0}
-          />
+          <MotionImage src="/proposals.avif" alt="proposals" width={570} height={0} />
         </motion.div>
-      </div>
+      
+    </div>
     </div>
   );
 }
