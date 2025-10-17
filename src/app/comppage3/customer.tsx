@@ -4,12 +4,12 @@ import React from "react";
 function Customer() {
   return (
     <div>
-      <div className="w-full px-30 min-h-screen">
-        <p className="text-black text-5xl flex justify-center items-center mt-10">
+      <div className="w-full md:px-30 min-h-screen px-4">
+        <p className="text-black md:text-5xl text-xl flex justify-center items-center mt-10 font-semibold">
           What our customers say
         </p>
-        <div className="mt-10 bg-gray-100 w-full flex flex-row">
-          <div className="w-1/3 ">
+        <div className="mt-10 bg-gray-100 w-full flex md:flex-row justify-center items-center">
+          <div className="w-1/3 hidden md:block ">
             <motion.img
               src="https://cdn.prod.website-files.com/67df2c20360768e358fdd20a/67e1ed8c1c3d8962bd591fae_image%20(3).avif"
               alt="Reveal"
@@ -20,16 +20,19 @@ function Customer() {
               viewport={{ once: true, amount: 0.3 }}
             />{" "}
           </div>
-          <div className="bg-gray-300 w-[0.5px] ml-10"></div>
+          <div className="bg-gray-300 w-[0.5px] md:ml-10 px-3"></div>
           
-          <div className="w-[700px] h-[400] flex justify-center text-3xl items-center ml-10  ">
-            <p className="text-black mt-10 font-medium ">
+          <motion.div className="md:w-[700px] w-full md:h-[400] h-[450px] flex md:justify-center flex-col  md:ml-10  "
+          initial={{y:-20 ,opacity:0}} whileInView={{y:0,opacity:1}}
+          viewport={{once:true}}transition={{duration:0.8}}>
+            <h1 className="text-3xl font-bold text-black mt-10 ">Primex</h1>
+            <p className="text-black mt-10 font-semibold md:text-3xl text-xl ">
               Pointer has been a great tool for our businesses. We wanted to
               find an all in one solution that was seam for clients to use and
               the team has been a great resource when we have questions or
               recommendations!
             </p>
-          </div>
+          </motion.div>
         
         </div>
       </div>

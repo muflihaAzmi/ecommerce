@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 function Packed() {
   return (
-    <div className="w-full min-h-screen md:px-30">
+    <div className="w-full min-h-screen md:px-30 ">
       <div>
         <div className="flex md:flex-row  md:justify-between w-full  flex-col p-5">
           <h2 className="text-black md:text-6xl  text-3xl md:w-[800px] w-full">
@@ -18,13 +18,16 @@ function Packed() {
             <MoveRight className="mr-4 text-white" />
           </div>
         </div>
-        <div className="flex md:flex-row flex-col md:justify-between justify-center items-center gap-4 mt-10 ">
+        <div className="">
+        <div className="flex md:flex-row flex-col md:justify-between justify-center items-center gap-4 mt-10 px-5 ">
           <motion.div
-            className="bg-gray-100 h-[480px] w-[390px] "
-            initial={{ y:-10, opacity: 0 }}
+            className="bg-gray-100 h-[480px] md:w-[390px] w-full "
+            initial={{ y:-20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            transition={{duration:2}}
+          viewport={{once:true}}
           >
-            <div className="flex flex-col justify-center px-4 py-3 gap-4 ">
+            <div className="flex flex-col justify-center px-8 py-4 gap-4 ">
               <Image
                 src="/points.jpg"
                 alt="anneblack"
@@ -40,13 +43,13 @@ function Packed() {
               </p>
             </div>
           </motion.div>
-          <motion.div className="bg-gray-100 h-[480px] w-[390px] "
+          <motion.div className="bg-gray-100 h-[480px] md:w-[390px] w-full "
           initial={{y:-20,opacity:0}}
           whileInView={{y:0,opacity:1}}
-          transition={{duration:0.2}}
+          transition={{duration:2}}
           viewport={{once:true}}>
             
-            <div className="flex flex-col justify-center px-5 py-5 gap-4 ">
+            <div className="flex flex-col justify-center px-8 py-5 gap-4 ">
               <p className="text-black text-xl font-semibold px-2">
                 Automated Marketing
               </p>
@@ -62,8 +65,13 @@ function Packed() {
               />
             </div>
           </motion.div>
-          <div className="bg-gray-100 h-[480px] w-[390px] ">
-            <div className="flex flex-col justify-center px-5 py-5 gap-4 ">
+          <motion.div className="bg-gray-100 h-[480px] md:w-[390px] w-full "
+        
+          initial={{y:-20,opacity:0}}
+          whileInView={{y:0,opacity:1}}
+          transition={{duration:2}}
+          viewport={{once:true}}>
+            <div className="flex flex-col justify-center px-8 py-5 gap-4 ">
               <Image
                 src="/anneblack.avif"
                 alt="anneblack"
@@ -79,7 +87,8 @@ function Packed() {
                 you need with policies.
               </p>
             </div>
-          </div>
+          </motion.div>
+        </div>
         </div>
       </div>
     </div>

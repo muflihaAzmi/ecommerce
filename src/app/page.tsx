@@ -8,6 +8,9 @@ import Bannertoggle from "./comppage3/bannertoggle";
 import Deliver from "./comppage3/Deliver";
 import Packed from "./comppage3/packed";
 import Customer from "./comppage3/customer";
+import LeatestBlog from "./comppage3/lateastBlog";
+import ImageRow from "./comppage3/banner2";
+import Footer from "./footercomponents/footer2";
 
 export default function Home() {
   const slider = [
@@ -162,7 +165,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="absolute right-3 top-0 overflow-hidden "
+            className="absolute right-3 top-0 overflow-hidden hidden md:block "
             style={{
               scale,
               y,
@@ -221,6 +224,9 @@ export default function Home() {
       <Deliver/>
       <Packed/>
      <Customer/>
+     <LeatestBlog/>
+     < ImageRow/>
+    
      
     </div>
   );

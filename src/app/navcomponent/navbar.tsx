@@ -54,7 +54,8 @@ function Navbar() {
         </div>
       </div>
       {open && (
-        <div className="md:hidden absolute flex flex-col mt-18 bg-white text-black gap-2 items-center w-full p-4 ">
+        <div className="md:hidden absolute flex flex-col bg-white text-black gap-2 items-center w-full p-4 ">
+          <div className="">
           <Link href="" className="hover:text-orange-400">
             Home
           </Link>
@@ -75,6 +76,7 @@ function Navbar() {
             <button className="bg-black px-6 py-3 rounded-3xl font-medium hover:bg-white text-white hover:text-black shadow-md duration-500">
               Book A Demo
             </button>
+          </div>
           </div>
         </div>
       )}
