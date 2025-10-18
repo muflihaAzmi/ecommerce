@@ -5,7 +5,7 @@ import { CircleCheck, FileText, MoveRight } from "lucide-react";
 
 function Deliver() {
   return (
-    <div className="w-full mt-20 min-h-screen">
+    <div className="w-full mt-20 h-shreen">
     <div className=" container mx-auto md:px-20 flex flex-col  mt-10">
       
         

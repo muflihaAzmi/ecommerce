@@ -5,10 +5,10 @@ import { MoveRight } from "lucide-react";
 
 export default function DiagonalBox() {
   return (
-    <div className="md:px-50 min-h-screen w-full px-5">
+    <div className=" container mx-auto md:px-50 min-h-screen w-full px-2 mt-10">
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{
           duration: 1.2,
           ease: "easeInOut",
@@ -17,7 +17,13 @@ export default function DiagonalBox() {
         style={{
           background: "linear-gradient(115deg, black 65%, blue 55%)",
         }}
-      >  <div className=" flex-col flex ">
+      >  <motion.div className=" flex-col flex "
+       initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1.2,
+          ease: "easeInOut",
+        }}>
         <div className="w-[400px] flex mt-30 md:ml-30">
           <h1 className="text-5xl font-semibold ">Rethink your business</h1>
         </div>
@@ -28,7 +34,7 @@ export default function DiagonalBox() {
           </button>
          <MoveRight className="mr-4 text-black" />
         </div>
-        </div>
+        </motion.div>
 
 
       </motion.div>

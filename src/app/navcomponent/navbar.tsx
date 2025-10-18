@@ -4,15 +4,22 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, ShoppingCart } from "lucide-react";
+import { useRouter } from "next/navigation";
+
+
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+    const router = useRouter();
 
   const handleclick = () => {
     setOpen((toggle) => !toggle);
   };
-
+const send=()=>{
+  router.push("/contactpage")
+}
   return (
+    <div className="container mx-auto">
     <nav className=" bg-white md:w-full h-[70px]  flex justify-between border-b-1">
       <div className="flex  items-center md:pl-8  pl-4 gap-2">
         <Image src="/pointersy.svg" alt="pointer logo" width={30} height={0} />
@@ -20,10 +27,10 @@ function Navbar() {
       </div>
 
       <div className="hidden md:w-full md:flex gap-x-8 items-center justify-center cursor-pointer text-black text-xl font-medium">
-        <Link href="" className="hover:text-orange-400">
+        <Link href="/" className="hover:text-orange-400">
           Home
         </Link>
-        <Link href="" className="hover:text-orange-400">
+        <Link href="/contactpage" className="hover:text-orange-400">
           Contact
         </Link>
         <Link href="" className="hover:text-orange-400">
@@ -42,7 +49,7 @@ function Navbar() {
             Log In
           </button>
 
-          <button className="bg-black w-35 py-2 rounded-3xl font-medium hover:bg-white hover:text-black shadow-md duration-500">
+          <button className="bg-black w-35 py-2 rounded-3xl font-medium hover:bg-white hover:text-black shadow-md duration-500" onClick={send}>
             Book A Demo
           </button>
         </div>
@@ -56,10 +63,10 @@ function Navbar() {
       {open && (
         <div className="md:hidden absolute flex flex-col bg-white text-black gap-2 items-center w-full p-4 ">
           <div className="">
-          <Link href="" className="hover:text-orange-400">
+          <Link href="/" className="hover:text-orange-400">
             Home
           </Link>
-          <Link href="" className="hover:text-orange-400">
+          <Link href="/contactpage" className="hover:text-orange-400">
             Contact
           </Link>
           <Link href="" className="hover:text-orange-400">
@@ -73,7 +80,7 @@ function Navbar() {
               Log In
             </button>
 
-            <button className="bg-black px-6 py-3 rounded-3xl font-medium hover:bg-white text-white hover:text-black shadow-md duration-500">
+            <button onClick={send} className="bg-black px-6 py-3 rounded-3xl font-medium hover:bg-white text-white hover:text-black shadow-md duration-500">
               Book A Demo
             </button>
           </div>
@@ -81,6 +88,7 @@ function Navbar() {
         </div>
       )}
     </nav>
+    </div>
   );
 }
 

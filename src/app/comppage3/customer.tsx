@@ -3,8 +3,8 @@ import React from "react";
 
 function Customer() {
   return (
-    <div>
-      <div className="w-full md:px-30 min-h-screen px-4">
+    <div className="container mx-auto md:mt-10 h-screen mt-220 ">
+      <div className="w-full md:px-30 px-4">
         <p className="text-black md:text-5xl text-xl flex justify-center items-center mt-10 font-semibold">
           What our customers say
         </p>

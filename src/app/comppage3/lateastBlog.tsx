@@ -55,22 +55,22 @@ function LeatestBlog() {
   const items = [
     {
       id: 1,
-      img: "/points.jpg",
+      img: "/building2.jpg",
       title: "Fair Workload Distribution",
       desc: "Balance your team's productivity effectively.",
-      bg: "bg-blue-600",
+      bg: "bg-black",
     },
     {
       id: 2,
-      img: "/points.jpg",
+      img: "/buildins.jpg",
       title: "Strong Product Culture",
       desc: "Create a team that thrives on innovation.",
-      bg: "bg-pink-600",
+      bg: "bg-black",
     },
   ];
 
   return (
-     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-8 gap-6 ">
+     <div className="flex md:flex-row flex-col md:justify-center items-center h-screen md:px-30 gap-6  ">
       {items.map((item,) => (
         <motion.div
           key={item.id}
@@ -80,7 +80,7 @@ function LeatestBlog() {
             width: active === item.id ? "75%" : "50%",
           }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="relative rounded-2xl overflow-hidden cursor-pointer shadow-lg h-[420px]"
+          className="relative  overflow-hidden cursor-pointer shadow-lg h-[420px]"
         >
           {/* Image */}
           <motion.img
@@ -96,11 +96,11 @@ function LeatestBlog() {
 
           {/* Content Box */}
           <motion.div
-            className={`absolute bottom-0 left-0 w-full text-white ${item.bg} p-6`}
-            initial={{ opacity: 0, y: 50, height: 0 }}
+            className={`absolute bottom-30 left-30 w-[300px] text-white ${item.bg} p-6`}
+            initial={{ opacity: 0, x: -50, height: 0 }}
             animate={{
               opacity: active === item.id ? 1 : 0,
-              y: active === item.id ? 0 : 50,
+              x: active === item.id ? 0 : 50,
               height: active === item.id ? "auto" : 0,
             }}
             transition={{ duration: 0.5, ease: "easeOut" }}

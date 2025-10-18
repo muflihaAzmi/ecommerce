@@ -10,7 +10,7 @@ function ImageRow() {
   const star = Array.from({ length: repeatCount });
 
   return (
-    <div className="md:p-30 ">
+    <div className=" container mx-auto md:p-30 mt-10">
       <div className="flex justify-center ">
         <p className="text-black md:text-5xl text-3xl flex items-center  text-center font-semibold ">
           Hear from those who matter

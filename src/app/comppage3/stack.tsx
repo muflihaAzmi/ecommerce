@@ -5,7 +5,7 @@ import { CircleCheck, FileText, MoveRight } from "lucide-react";
 
 function Stack() {
   return (
-    <div className="w-full">
+    <div className="w-full h-screen">
     <div className=" container mx-auto md:px-20 flex flex-col  mt-10">
       
         <div className="flex justify-center">
@@ -68,8 +68,8 @@ function Stack() {
                   <CircleCheck />
                   Connect Pointer to your other tools.
                 </div>
-                <div className="w-[140px] bg-white border border-gray-200 rounded-3xl items-center flex gap-2 px-1 py-1">
-                  <button className="bg-gray-200 text-black px-2 py-2 rounded-3xl text-[10px] ">
+                <div className="w-[140px] bg-white border border-gray-200 rounded-3xl items-center flex gap-4 px-1 py-1">
+                  <button className="bg-gray-200 text-black px-2 py-2 rounded-3xl text-[10px] font-semibold ">
                     Learn more
                   </button>
                   <MoveRight className="mr-4 text-black" />

@@ -5,9 +5,9 @@ import { motion } from "motion/react";
 
 function Packed() {
   return (
-    <div className="w-full min-h-screen md:px-30 ">
-      <div>
-        <div className="flex md:flex-row  md:justify-between w-full  flex-col p-5">
+    <div className="w-full h-screen md:px-30 mt-20 ">
+      <div className="container mx-auto">
+        <div className="flex md:flex-row  md:justify-between w-full  flex-col  p-5">
           <h2 className="text-black md:text-6xl  text-3xl md:w-[800px] w-full">
             Packed with the features you need
           </h2>

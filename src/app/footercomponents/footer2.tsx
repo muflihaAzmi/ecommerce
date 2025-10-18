@@ -7,10 +7,10 @@ import { motion } from "motion/react";
 
 function Footer() {
   return (
-    <div className="md:px-30">
-      <div className=" flex justify-between md:flex-row flex-col gap-4 w-full ">
+    <div className=" container mx-auto md:px-30 mt-10 ">
+      <div className=" flex justify-between md:flex-row flex-col gap-4 w-full ml-2 ">
         <div className="flex flex-col gap-4">
-          <p className="text-black w-[300px] font-semibold">
+          <p className="text-black w-[300px] font-semibold ">
             Built by entrepreneurs just like you to provide a better accounting
             solution for small businesses.
           </p>
@@ -57,13 +57,22 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex border-t-1 border-b-1 flex-row gap-4 w-[100px] ">
+      <div className="flex border-t-1 border-b-1 flex-row gap-4  ">
         <motion.img
               src="/pointersy.svg"
           alt="pointer logo"
           width={300}
           height={50}
-          animate={{ color: ["#0000ff", "#ff0000", "#00ff00", "#fff000"] }}
+          animate={{
+            filter: [
+              "invert(20%)",
+              "sepia(243%)",
+              "saturate(1576%)",
+              "hue-rotate(-21deg)",
+              "brightness(137%)",
+              "contrast(73%)"
+            ],
+          }}
           transition={{ duration: 4, repeat: Infinity, ease: "linear" }} >
         </motion.img>
        
