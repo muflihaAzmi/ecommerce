@@ -14,15 +14,15 @@ function Build() {
   const [Currentpage, setCurrentpage] = useState("proposals");
 
   return (
-    <div className="">
+    <div className="w-full">
       <div className=" container mx-auto mt-30 ">
         <div className="flex justify-center  ">
-          <p className="text-black md:text-[35px] ">
+          <p className="text-black md:text-[35px] text-3xl text-center">
             Built to automate the everyday
           </p>
         </div>
         <div className="flex justify-center mt-5 ">
-          <div className="flex rounded-3xl border justify-center items-center  w-68 border-gray-400 bg-gray-200 text-gray-400 px-2 text-[10px]">
+          <div className="flex rounded-3xl border justify-center items-center w-80 border-gray-400 bg-gray-200 text-gray-400 px-2 text-[10px]">
             <button
               onClick={() => setCurrentpage("proposals")}
               className={`px-2  py-1 ${

@@ -6,18 +6,18 @@ import { CircleCheck, FileText, MoveRight } from "lucide-react";
 function Stack() {
   return (
     <div className="w-full h-screen">
-    <div className=" container mx-auto md:px-20 flex flex-col  mt-10">
+    <div className=" container mx-auto md:px-20 flex flex-col  mt-20">
       
         <div className="flex justify-center">
           {" "}
-          <h1 className="md:text-5xl text-4xl text-black flex justify-center w-[500px] text-center font-semibold">
+          <h1 className="md:text-5xl text-4xl text-black flex  md:w-[800px] text-center font-semibold">
             Simple integration with your stack
           </h1>
         </div>
-        <div className=" mt-10 p-5 flex md:flex-row gap-4 flex-col">
-          <div className="w-full md:w-1/2 h-[500px] ">
+        <div className=" mt-10 p-5 flex sm:flex-col lg:flex-row gap-4 flex-col">
+          <div className="w-full  h-[500px] ">
             <motion.img
-              src="https://cdn.prod.website-files.com/67df2c20360768e358fdd20a/67e1ed8c9f6aff916582fd67_image%20(1).avif"
+              src="deliver.avif"
               alt="Reveal"
               className="w-[770px] h-[500px] object-cover origin-top  shadow-lg"
               initial={{ scaleY: 0, opacity: 0 }}
@@ -27,7 +27,7 @@ function Stack() {
             />{" "}
           </div>
           <motion.div
-            className="w-full md:w-1/2 origin-top "
+            className="w-full  origin-top "
             initial={{ y: 10, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

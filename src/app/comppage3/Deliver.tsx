@@ -5,14 +5,14 @@ import { CircleCheck, FileText, MoveRight } from "lucide-react";
 
 function Deliver() {
   return (
-    <div className="w-full mt-20 h-shreen">
+    <div className="w-full mt-20 h-screen">
     <div className=" container mx-auto md:px-20 flex flex-col  mt-10">
       
         
-        <div className=" mt-10 p-5 flex md:flex-row gap-4 flex-col">
+        <div className=" mt-10 p-5 flex sm:flex-col lg:flex-row gap-4 flex-col">
         
           <motion.div
-            className="w-full md:w-1/2 origin-top "
+            className="w-full  origin-top "
             initial={{ y: 10, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -62,9 +62,9 @@ function Deliver() {
               </div>
             </div>
           </motion.div>
-            <div className="w-full md:w-1/2 h-[500px] ">
+            <div className="w-full  h-[500px] ">
             <motion.img
-              src="https://cdn.prod.website-files.com/67df2c20360768e358fdd20a/67e1ed8dd8e9063103a9ef19_image%20(2).avif"
+              src="Delivergirl.avif"
               alt="Reveal"
               className="w-[770px] h-[500px] object-cover origin-top  shadow-lg"
               initial={{ scaleY: 0, opacity: 0 }}

@@ -11,6 +11,7 @@ import Customer from "./comppage3/customer";
 import LeatestBlog from "./comppage3/lateastBlog";
 import ImageRow from "./comppage3/banner2";
 import Footer from "./footercomponents/footer2";
+import Image from "next/image";
 
 export default function Home() {
   const slider = [
@@ -108,8 +109,8 @@ export default function Home() {
   return (
     <div>
       <div className=" w-full ">
-        <section className="container mx-auto  md:min-h-[200lvh] min-h-[80lvh] md:p-20  pr-5 pt-10 bg-white  relative">
-          <div className="h-[100px] flex  md:px-5 px-5 relative md:flex row flex-col ">
+        <section className="container mx-auto  md:min-h-[200lvh] min-h-[80lvh] lg:p-20 sm:p-8 md:pr-5 pt-10 bg-white  relative">
+          <div className="h-[100px] flex  px-5 relative md:flex row flex-col ">
             <motion.div
               className="w-full max-w-[600px] flex flex-col gap-4 z-4"
               initial={{ opacity: 0, y: 20 }}
@@ -119,18 +120,12 @@ export default function Home() {
               }}
               transition={{ duration: 1 }}
             >
-              <div className="flex flex-row bg-white border border-gray-200 rounded-3xl w-60 gap-2 justify-center items-center ">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" />
-                </svg>
-                <p className="text-black text-[15px] font-medium">
+              <div className="flex flex-row bg-white border border-gray-200 rounded-3xl md:w-65 w-58 gap-2 justify-center items-center ">
+                <Image  src="/rocket.svg"
+                alt=""
+                width={20}
+                height={20}/>
+                <p className="text-black md:text-[15px]  text-[10px] font-medium">
                   BEST BUSINESS WEBSITE
                 </p>
               </div>
@@ -138,7 +133,7 @@ export default function Home() {
                 <h1 className="md:text-[50px] sm:text-[40px] text-[30px] font-semibold text-black leading-tight">
                   Powering every part of your accounting operations.
                 </h1>
-                <p className="md:text-[18px] sm:text-[15px] text-[12px] text-gray-600">
+                <p className="md:text-[18px] sm:text-[15px] text-[15px] text-gray-600">
                   Built by entrepreneurs just like you to provide a better
                   accounting solution for small businesses.
                 </p>
@@ -156,7 +151,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="absolute right-3 top-0 overflow-hidden hidden md:block "
+              className="absolute right-3 top-0 overflow-hidden sm:hidden hidden lg:block "
               style={{
                 scale,
                 y,
@@ -177,7 +172,7 @@ export default function Home() {
                 <source src="/nature.mp4" type="video/mp4" />
               </video>
             </motion.div>
-            <div className="md:hidden mt-20">
+            <div className="lg:hidden mt-20">
               <video
                 autoPlay
                 loop
@@ -192,8 +187,8 @@ export default function Home() {
         </section>
       </div>
 
-       <div className="container mx-auto mygradient  overflow-hidden   w-full ">
-        <div className="flex justify-center  gap-9 border-1 ">
+       <div className="container mx-auto mygradient  overflow-hidden w-full mt-20">
+        <div className="flex justify-center gap-9 ">
           <motion.div
             className="flex flex-shrink-0 h-[50px] gap-9 justify-center   "
             initial={{ x: 0 }}
@@ -207,7 +202,7 @@ export default function Home() {
           <motion.div
             className="flex flex-shrink-0 h-[50px] gap-9 justify-center  "
             initial={{ x: 0 }}
-            animate={{ x: "-100%" }}
+            animate={{ x: "-50%" }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           >
             {slider.map((logo, index) => {

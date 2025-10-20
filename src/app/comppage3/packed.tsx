@@ -5,10 +5,10 @@ import { motion } from "motion/react";
 
 function Packed() {
   return (
-    <div className="w-full h-screen md:px-30 mt-20 ">
+    <div className="w-full h-screen lg:px-30  sm:mt-110 mt-80 lg:mt-10 ">
       <div className="container mx-auto">
-        <div className="flex md:flex-row  md:justify-between w-full  flex-col  p-5">
-          <h2 className="text-black md:text-6xl  text-3xl md:w-[800px] w-full">
+        <div className="flex lg:flex-row lg:justify-between sm:flex-col w-full  flex-col  p-5">
+          <h2 className="text-black lg:text-6xl sm:text-4xl  md:w-[800px] w-full">
             Packed with the features you need
           </h2>
           <div className="bg-black w-[220px] h-12 px-1 flex items-center rounded-3xl shadow-lg mt-4 flex-row justify-between">
@@ -19,7 +19,7 @@ function Packed() {
           </div>
         </div>
         <div className="">
-        <div className="flex md:flex-row flex-col md:justify-between justify-center items-center gap-4 mt-10 px-5 ">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4 mt-10 lg:px-5 px-5  ">
           <motion.div
             className="bg-gray-100 h-[480px] md:w-[390px] w-full "
             initial={{ y:-20, opacity: 0 }}
@@ -27,7 +27,7 @@ function Packed() {
             transition={{duration:2}}
           viewport={{once:true}}
           >
-            <div className="flex flex-col justify-center px-8 py-4 gap-4 ">
+            <div className="flex flex-col justify-center px-8 py-4 gap-4  items-center">
               <Image
                 src="/points.jpg"
                 alt="anneblack"
@@ -49,11 +49,11 @@ function Packed() {
           transition={{duration:2}}
           viewport={{once:true}}>
             
-            <div className="flex flex-col justify-center px-8 py-5 gap-4 ">
+            <div className="flex flex-col justify-center px-8 py-5 gap-4 items-center ">
               <p className="text-black text-xl font-semibold px-2">
                 Automated Marketing
               </p>
-              <p className="text-12px text-gray-400 px-2">
+              <p className="text-12px text-gray-400 px-2 items-center">
                 Get dedicated support anytime, anywhere.We're always ready to
                 help.
               </p>
@@ -71,7 +71,7 @@ function Packed() {
           whileInView={{y:0,opacity:1}}
           transition={{duration:2}}
           viewport={{once:true}}>
-            <div className="flex flex-col justify-center px-8 py-5 gap-4 ">
+            <div className="flex flex-col justify-center px-8 py-5 gap-4 items-center">
               <Image
                 src="/anneblack.avif"
                 alt="anneblack"

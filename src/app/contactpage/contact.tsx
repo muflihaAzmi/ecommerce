@@ -9,12 +9,12 @@ import { motion } from "motion/react";
 
 function Contactquestions() {
   return (
-    <motion.div className="w-full md:px-30 h-[100lvh] mt-10">
+    <motion.div className="w-full md:px-30 h-[100lvh] mt-50 lg:mt-0 px-5">
       <div>
-        <h1 className="text-black md:text-5xl font-semibold text-3xl ">
+        <h1 className="text-black md:text-5xl font-semibold text-3xl  ">
           Frequently asked questions
         </h1>
-        <div className="flex md:flex-row gap-4 mt-10 flex-col  ">
+        <div className="flex lg:flex-row md:gap-4 gap-10 mt-5 flex-col  ">
           <motion.div
             className="md:w-1/3 bg-gray-100w-full bg-gray-100 "
             initial={{ y: 20, opacity: 0 }}
@@ -22,11 +22,11 @@ function Contactquestions() {
             transition={{ duration: 0.4 }}
           >
             <img
-              src="https://cdn.prod.website-files.com/67df2c20360768e358fdd20a/67e4a9839178f3221f591098_3dicons-flag-iso-color.avif"
+              src="redflag.avif"
               alt=""
             ></img>
           </motion.div>
-          <div className=" flex flex-col text-black md:w-3/4 justify-center py-4 md:px-10 px-3 gap-4 font-semibold w-full">
+          <div className=" flex flex-col text-black lg:w-3/4 justify-center py-4 md:px-10 px-5 gap-4 font-semibold w-full ">
             <motion.div
               className="border-b-1 text-gray-200 pb-10 "
               initial={{y:20, visibility:"hidden",opacity: 0 }}

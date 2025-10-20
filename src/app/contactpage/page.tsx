@@ -8,12 +8,12 @@ import Contactquestions from "./contact";
 function Contactpage() {
   return (
     <div className="w-full">
-      <motion.div className="h-screen border-l-1 md:px-30 flex md:flex-row justify-between flex-col"
+      <motion.div className="h-[100lvh] border-l-1 md:px-30 flex  sm:flex-col lg:flex-row justify-between flex-col px-5"
       initial={{y:20 ,opacity:0}}
       whileInView={{y:0,opacity:1}}
       transition={{duration:0.8}}
        viewport={{ once: true, amount: 0.6}} >
-        <div className="md:w-1/3 mt-20 w-full px-2 ">
+        <div className="lg:w-1/3 mt-20 w-full px-2 ">
           <div className="text-black flex flex-col border-b-1 border-gray-300 pb-5 gap-4">
             <h1 className="md:text-6xl text-3xl font-semibold">Contact Us</h1>
             <p className="text-gray-400">
@@ -28,7 +28,7 @@ function Contactpage() {
               <div className="flex flex-row items-center gap-4 ">
                 <img
                   className="rounded-full w-[50px]"
-                  src="https://cdn.prod.website-files.com/67df2c20360768e358fdd20a/67e4581ebe0c272eda9f1e39_Rectangle%2034626287.avif"
+                  src="contactus.avif"
                   alt=""
                 ></img>
                 <div className="flex-col items-center">

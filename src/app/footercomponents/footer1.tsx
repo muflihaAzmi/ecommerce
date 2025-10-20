@@ -5,7 +5,7 @@ import { MoveRight } from "lucide-react";
 
 export default function DiagonalBox() {
   return (
-    <div className=" container mx-auto md:px-50 min-h-screen w-full px-2 mt-10">
+    <div className=" container mx-auto lg:px-50 min-h-screen w-full sm:mt-40 mt-80 lg:mt-0 px-2 ">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -17,18 +17,18 @@ export default function DiagonalBox() {
         style={{
           background: "linear-gradient(115deg, black 65%, blue 55%)",
         }}
-      >  <motion.div className=" flex-col flex "
+      >  <motion.div className=" flex-col flex  "
        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           duration: 1.2,
           ease: "easeInOut",
         }}>
-        <div className="w-[400px] flex mt-30 md:ml-30">
+        <div className=" flex mt-30  lg:ml-30">
           <h1 className="text-5xl font-semibold ">Rethink your business</h1>
         </div>
-        <p className="md:w-[400px] w-[300px] flex mt-10 md:ml-30 text-gray-300 font-semibold">Boost efficiency, save time, and enhance your campaigns with Pointer.</p>
-         <div className="bg-white w-[220px] h-13 px-1 flex items-center rounded-3xl shadow-lg mt-8 flex-row justify-between md:ml-30">
+        <p className="md:w-[400px] w-[300px] flex mt-10 lg:ml-30 text-gray-300 font-semibold">Boost efficiency, save time, and enhance your campaigns with Pointer.</p>
+         <div className="bg-white w-[220px] h-13 px-1 flex items-center rounded-3xl shadow-lg mt-8 flex-row justify-between lg:ml-30">
           <button className="bg-black text-white px-6 py-2 rounded-3xl font-medium shadow-md hover:shadow-lg transition-shadow">
             Book a Demo
           </button>

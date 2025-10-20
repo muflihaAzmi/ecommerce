@@ -13,9 +13,9 @@ function Proposals() {
 
   return (
     <div>
-      <div className=" min-h-screen w-full md:px-30 mt-10 flex md:flex-row flex-col gap-4 px-5 ">
+      <div className=" min-h-screen w-full md:px-30 mt-10 flex lg:flex-row sm:flex-col flex-col gap-4 px-5 ">
         <motion.div
-          className="md:p-5 bg-gray-100 md:w-1/2 h-[600px] w-full p-2"
+          className="md:p-5 bg-gray-100 md:w-full h-[600px] w-full p-2"
           initial={{ opacity: 0, y: 50 }} 
           whileInView={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -86,7 +86,7 @@ function Proposals() {
             </div>
           </div>
         </motion.div>
-        <motion.div  className="origin-top  "
+        <motion.div  className="origin-top w-full "
           initial={{ scaleY: 0, opacity: 0 }}
           whileInView={{ scaleY: 1, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}

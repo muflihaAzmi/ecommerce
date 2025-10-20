@@ -7,8 +7,8 @@ import Image from 'next/image'
 function Contracts() {
   return (
     <div>
-         <div className="w-full md:px-30  flex md:flex-row flex-col gap-4 mt-10 ">
-        <motion.div className="md:p-5 bg-gray-100 md:w-1/2 w-full p-2"  initial={{y:40 ,opacity:0}}
+         <div className="w-full md:px-30  px-5 flex sm:flex-col lg:flex-row flex-col gap-4 mt-10 ">
+        <motion.div className="md:p-5 bg-gray-100 w-full p-2"  initial={{y:40 ,opacity:0}}
         animate={{y:0,opacity:1}}
         transition={{ duration: 0.8, ease: "easeOut" }}>
           <div className="w-full  flex flex-col  gap-4  ">
@@ -77,7 +77,7 @@ function Contracts() {
           </div>
         </motion.div>
         <motion.div
-          className="md:w-1/2 w-full"
+          className=" w-full"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{  duration: 0.8, ease: "easeOut" }}
@@ -85,8 +85,7 @@ function Contracts() {
           <Image
             src ="/contract.avif"
             alt="contracts"
-            width={650}
-            height={200}
+             width={570} height={0} 
           />
             
         </motion.div>

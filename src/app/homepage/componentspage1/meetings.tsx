@@ -8,8 +8,8 @@ import { once } from 'events'
 function meetings() {
   return (
     <div>
-        <div className="w-full md:px-30 mt-10 flex md:flex-row flex-col gap-4 px-10 ">
-        <motion.div className="md:p-5 bg-gray-100 md:w-1/2 w-full p-2"  initial={{y:40 ,opacity:0}}
+        <div className="w-full md:px-30 mt-10 flex lg:flex-row sm:flex-col flex-col gap-4 px-10 ">
+        <motion.div className="md:p-5 bg-gray-100  w-full p-2"  initial={{y:40 ,opacity:0}}
         animate={{y:0,opacity:1}}
         transition={{ duration: 0.8, ease: "easeOut" }}>
           <div className="w-full  flex flex-col  gap-4  ">
@@ -78,7 +78,7 @@ function meetings() {
           </div>
         </motion.div>
         <motion.div
-          className="md:w-1/2 w-full"
+          className=" w-full"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut"  }}
@@ -86,8 +86,7 @@ function meetings() {
           <Image
             src ="/meetings.avif"
             alt="meeting"
-            width={6500}
-            height={200}
+            width={570} height={0} 
           />
         </motion.div>
       </div>
