@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { easeIn, easeInOut, easeOut, motion } from "motion/react";
+import { spaceGrotesk } from "../ui/components";
 
 function ImageRow() {
   // Number of times to repeat the image
@@ -10,13 +11,13 @@ function ImageRow() {
   const star = Array.from({ length: repeatCount });
 
   return (
-    <div className=" container mx-auto md:p-30 mt-10">
+    <div className="  w-[90%] border-r-1 border-l-1 container mx-auto md:p-13 md:mt-10 mt-90">
       <div className="flex justify-center ">
-        <p className="text-black md:text-5xl text-3xl flex items-center  text-center font-semibold ">
+        <p className={`text-black md:text-6xl text-3xl flex items-center  text-center font-semibold tracking-tighter [word-spacing:0.1px] leading-none ${spaceGrotesk.className} `}>
           Hear from those who matter
         </p>
       </div>
-      <motion.div className="flex md:flex-row justify-between mt-10 flex-col gap-16"
+      <motion.div className="flex md:flex-row justify-between mt-20 flex-col gap-16 "
       initial={{y:-30,opacity:0}}
       whileInView={{y:0,opacity:1}}
       transition={{duration:2,ease:easeIn}}

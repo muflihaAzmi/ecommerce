@@ -3,6 +3,7 @@ import { FileText, MoveRight } from "lucide-react";
 import InfoCard from "./infocard";
 import React, { ReactNode } from "react";
 import { motion } from "motion/react";
+import { spaceGrotesk } from "../ui/components";
 
 function MainPacked() {
   const CardContent = [
@@ -56,10 +57,10 @@ function MainPacked() {
     },
   ];
   return (
-    <div className="w-full">
-      <div className=" container mx-auto md:px-30 min-h-screen md:mt-30 flex flex-col gap-16">
+    <div className="w-full ">
+      <div className=" container w-[90%] lg:mt-70 border-l-1  border-r-1 mx-auto md:px-13 min-h-screen mt-150  flex flex-col gap-16 ">
         <div className="flex  md:justify-between sm:flex-col lg:flex-row flex-col p-5">
-          <h2 className="text-black lg:text-5xl sm:text-4xl text-2xl">
+          <h2 className={`text-black lg:text-6xl sm:text-4xl text-2xl tracking-tighter md:w-[500px] font-semibold [word-spacing:0.1px] leading-tight ${spaceGrotesk.className} `}>
             Packed with the features you need
           </h2>
           <div className="bg-black w-[220px] h-12 px-1 flex items-center rounded-3xl shadow-lg mt-4 flex-row justify-between">

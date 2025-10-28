@@ -7,7 +7,6 @@ import { Menu, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 
-
 function Navbar() {
   const [open, setOpen] = useState(false);
     const router = useRouter();
@@ -19,29 +18,31 @@ const send=()=>{
   router.push("/contactpage")
 }
   return (
-    <div className="container mx-auto relative">
-    <nav className=" bg-white md:w-full h-[70px]  flex justify-between border-b-1">
-      <div className="flex  items-center md:pl-8  pl-4 gap-2">
+    <div className="md:w-full relative">
+    <nav className=" bg-white container w-[88%] mx-auto h-[70px]   flex justify-between  border-b-1">
+     
+      <div className="flex  items-center  gap-2">
         <Image src="/pointersy.svg" alt="pointer logo" width={30} height={0} />
-        <h1 className="text-black text-[35px] font-semibold">Pointer</h1>
+        <h1 className="text-black text-2xl font-semibold">Pointer</h1>
       </div>
 
-      <div className="hidden lg:w-full sm:hidden  lg:flex gap-x-8 items-center justify-center cursor-pointer text-black text-xl font-medium z-0">
+      <div className={`hidden lg:w-full sm:hidden  lg:flex gap-x-8 ml-40  items-center justify-center cursor-pointer text-gray-800 text-base  z-0`}>
         <Link href="/" className="hover:text-orange-400">
           Home
         </Link>
+        
         <Link href="/contactpage" className="hover:text-orange-400">
           Contact
         </Link>
-        <Link href="" className="hover:text-orange-400">
+        <Link href="/blog" className="hover:text-orange-400">
           Blog
         </Link>
-        <Link href="" className="hover:text-orange-400">
+        <Link href="/review"className="hover:text-orange-400">
           Pages
-        </Link>
+        </Link> 
       </div>
 
-      <div className="flex items-center md:pr-8 pr-4 gap-5  lg:justify-between">
+      <div className="flex items-center pr-4 gap-5  lg:justify-between">
         <ShoppingCart className="text-black mb-2 mr-2 " />
 
         <div className="lg:flex lg:justify-center sm:hidden items-center gap-x-2 hidden">
@@ -61,7 +62,7 @@ const send=()=>{
         </div>
       </div>
       {open && (
-        <div className="lg:hidden absolute justify-center z-10  flex flex-col bg-white text-center  text-black gap-2 items-center p-5 w-full  mt-20 ">
+        <div className="lg:hidden absolute justify-center z-10  flex flex-col bg-white text-center   text-black gap-2 items-center p-5 w-[88%] mt-20 ">
           <div className=" flex flex-col mt-15  gap-4">
           <Link href="/" className="hover:text-orange-400">
             Home
@@ -69,10 +70,10 @@ const send=()=>{
           <Link href="/contactpage" className="hover:text-orange-400">
             Contact
           </Link>
-          <Link href="" className="hover:text-orange-400">
+          <Link href="/blog" className="hover:text-orange-400">
             Blog
           </Link>
-          <Link href="" className="hover:text-orange-400">
+          <Link href="/review" className="hover:text-orange-400">
             Pages
           </Link>
           <div className="flex md:justify-center md:items-center md:gap-x-4 flex-col gap-y-2 ">
@@ -87,6 +88,7 @@ const send=()=>{
           </div>
         </div>
       )}
+   
     </nav>
     </div>
   );

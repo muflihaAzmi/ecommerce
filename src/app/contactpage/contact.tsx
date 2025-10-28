@@ -6,15 +6,16 @@ import {
 } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
+import { spaceGrotesk } from "../ui/components";
 
 function Contactquestions() {
   return (
-    <motion.div className="w-full md:px-30 h-[100lvh] mt-50 lg:mt-0 px-5">
+    <motion.div className="container mx-auto w-[90%] border-l-1 border-r-1 md:px-13 h-[100lvh] mt-50 lg:mt-10  px-5">
       <div>
-        <h1 className="text-black md:text-5xl font-semibold text-3xl  ">
+        <h1 className={`text-black md:text-6xl font-semibold text-3xl tracking-tighter [word-spacing:0.01px] leading-tight  ${spaceGrotesk.className}`}>
           Frequently asked questions
         </h1>
-        <div className="flex lg:flex-row md:gap-4 gap-10 mt-5 flex-col  ">
+        <div className="flex lg:flex-row md:gap-4 gap-10 mt-5 flex-col  md:mt-10">
           <motion.div
             className="md:w-1/3 bg-gray-100w-full bg-gray-100 "
             initial={{ y: 20, opacity: 0 }}

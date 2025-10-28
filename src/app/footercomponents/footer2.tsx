@@ -7,8 +7,8 @@ import { motion } from "motion/react";
 
 function Footer() {
   return (
-    <div className="  md:px-30 mt-10 w-full ">
-      <div className=" container mx-auto flex justify-between md:flex-row flex-col gap-4  px-5 ">
+    <div className="mt-10 w-full ">
+      <div className="w-[90%] container mx-auto  border-l-1 border-r-1 flex justify-between md:flex-row flex-col gap-4  px-5 ">
         <div className="flex flex-col gap-4">
           <p className="text-black w-[300px] font-semibold ">
             Built by entrepreneurs just like you to provide a better accounting
@@ -57,7 +57,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex border-t-1 border-b-1 flex-row gap-4  ">
+     
         {/* <motion.img
               src="/pointersy.svg"
           alt="pointer logo"
@@ -75,10 +75,10 @@ function Footer() {
           }}
           transition={{ duration: 4, repeat: Infinity, ease: "linear" }} >
         </motion.img> */}
-       
+        <div className="flex justify-center mt-10 ">
         
         <motion.h1
-          className=" lg:text-[300px] sm:text-[150px] text-[30px] flex flex-start font-bold px-5"
+          className=" lg:text-[200px] sm:text-[150px] text-[30px] flex flex-start font-bold px-5 justify-center border-t-1 w-[90%] "
           animate={{
             color: ["#000fff", "#ff0000", "#00ff00", "#ffff00"], 
           }}
@@ -92,7 +92,10 @@ function Footer() {
           Pointer
         </motion.h1>
       </div>
-      <div className="text-black flex md:flex-row justify-between p-4 flex-col px-5">
+
+     <div className="flex justify-center
+     ">
+      <div className="text-black flex flex-row justify-between px-20 border-t-1 w-[90%]">
       <div>
         <p>© All rights reserved Basecom.</p>
       </div>
@@ -100,6 +103,7 @@ function Footer() {
         <p>Licence</p>
         <p>Style Guide</p>
         <p>ChangeLog</p>
+      </div>
       </div>
       </div>
     </div>

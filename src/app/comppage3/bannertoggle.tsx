@@ -53,7 +53,7 @@ function AnimatedCounter({ value }: { value: string }) {
         const initialY = scrollTopToBottom ? 1 : -(numbersToRender.length - 1) * 3.5;
 
         return (
-          <div key={idx} className="relative h-[3.5rem] w-[2.5rem] overflow-hidden ">
+          <div key={idx} className="relative h-[3.5rem] w-[2.5rem] overflow-hidden  ">
             <motion.div
               initial={{ y: `${initialY}rem` }}
               animate={{ y: `${finalY}rem` }}
@@ -82,7 +82,7 @@ function AnimatedCounter({ value }: { value: string }) {
 function Inforoll({ logo, title, description }: InfoCardProps) {
   return (
     <div>
-      <div className="w-full md:w-[300px] text-black px-5 flex  justify-center flex-col gap-4 items-center ">
+      <div className="w-full md:w-[300px] text-black px-5 flex  justify-center flex-col gap-4 items-center mt-20 ">
         <div>{logo}</div>
         <AnimatedCounter value={title} />
         <p className="text-gray-600 text-2xl">{description}</p>
@@ -117,7 +117,7 @@ function Bannertoggle() {
 
   return (
     <div className=""> 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 justify-center mt-120 sm:mt-100 lg:mt-10 sm:px-30 gap-8 items-center ">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 justify-center mt-120 sm:mt-100 lg:mt-10 sm:px-30 gap-8 items-center sm:h-screen lg:h-30 ">
         {Bannerlogo.map((item, index) => (
           <Inforoll
             key={index}
