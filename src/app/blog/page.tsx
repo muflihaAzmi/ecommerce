@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Marketing from "./Marketing";
-import { div } from "motion/react-client";
+
 import { spaceGrotesk } from "../ui/components";
-import LeatestBlog from "../comppage3/lateastBlog";
+
 import { motion } from "motion/react";
 
 function BlogOne() {
@@ -249,7 +249,7 @@ function BlogOne() {
             </div>
           </div>
 
-          <div className="h-[500px] w-[900px] overflow-y-scroll no-scrollbar">
+          <div className="h-[900px] md:w-[900px] overflow-y-scroll no-scrollbar">
             {Blog === "NEWS" &&
               newsImage.map((items, index) => (
                 <Marketing

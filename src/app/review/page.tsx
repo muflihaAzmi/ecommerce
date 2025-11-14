@@ -108,7 +108,9 @@ function Review() {
      
       
       <ReviewOne/>
-      <Boomer/>
+      <div className="mt-550">
+      <Boomer />
+      </div>
     </div>
   );
 }

@@ -10,8 +10,8 @@ import {
 } from "@/components/ui/carousel"
 function Boomer() {
   return (
-    <div className="min-h-screen mt-100 ">
-      <div className="w-[90%] container mx-auto  border-l-1 border-r-1 md:px-30 px-5 mt-40">
+    <div className="min-h-screen  ">
+      <div className="w-[90%] container mx-auto  border-l-1 border-r-1 md:px-30 px-5 ">
       
         <p
           className={`text-black lg:text-5xl sm:text-4xl text-3xl flex  items-center mt-10 font-semibold tracking-tighter [word-spacing:0.01px] leading-tight text-center ${spaceGrotesk.className}`}

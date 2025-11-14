@@ -1,6 +1,6 @@
 import React from "react";
 
-function Marketing({backimage ,cardname } :any) {
+function Marketing({backimage ,cardname } :{backimage:string,cardname:string}) {
  
 
   return (
@@ -8,7 +8,7 @@ function Marketing({backimage ,cardname } :any) {
      
         <div
         
-          className="bg-cover bg-center h-[450px] md:w-[700px] w-[full] md:ml-10 pl-10 pt-10 md:mt-10 transition-transform duration-500 hover:scale-110 "
+          className="bg-cover bg-center md:h-[450px] md:w-[700px] md:ml-10 pl-10 pt-10 md:mt-10 transition-transform duration-500 hover:scale-110 "
           style={{ backgroundImage: `url(${backimage} )` } }
         >
           <div className="bg-white md:w-[400px] w-[280px] h-[350px] flex flex-col p-5 shadow-lg rounded  overflow-y-scroll no-scrollbar">

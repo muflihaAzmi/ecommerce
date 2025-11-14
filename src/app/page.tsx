@@ -208,7 +208,7 @@ export default function Home() {
             </video>
           </div>
         </div>
-        <div className="container mx-auto mygradient  overflow-hidden   w-[85%] mt-20">
+        <div className="container mx-auto mygradient overflow-hidden   w-[85%] mt-20">
           <div className="flex justify-center gap-9 ">
             <motion.div
               className="flex flex-shrink-0 h-[50px] gap-9 justify-center   "
