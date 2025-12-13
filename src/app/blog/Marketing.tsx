@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+
 
 function Marketing({backimage ,cardname } :{backimage:string,cardname:string}) {
  
@@ -21,11 +23,14 @@ function Marketing({backimage ,cardname } :{backimage:string,cardname:string}) {
               product team.
             </h1>
             <div className="flex items-center gap-3 md:mt-10">
-              <img
-                className="w-10 h-10 rounded-full"
-                src="https://cdn.prod.website-files.com/67e091ded7e9762ca9dbf5f1/67e3ebbccc71de8744fd5fd9_Ellipse%206.webp"
-                alt="Eleanor Pena"
-              />
+            <Image
+  src="https://cdn.prod.website-files.com/67e091ded7e9762ca9dbf5f1/67e3ebbccc71de8744fd5fd9_Ellipse%206.webp"
+  alt="Eleanor Pena"
+  width={40}
+  height={40}
+  className="rounded-full object-cover"
+/>
+
               <div className="text-black flex flex-col text-sm">
                 <h1 className="font-semibold">Eleanor Pena ,</h1>
                 <h1>AI Engineer</h1>

@@ -1,13 +1,12 @@
 import React from "react";
-import Image from "next/image";
 import { motion } from "motion/react";
-import { ChevronRight, CircleCheck, FileText, MoveRight } from "lucide-react";
+import { ChevronRight, CircleCheck, FileText,  } from "lucide-react";
 import { spaceGrotesk } from "../ui/components";
 
 function Stack() {
   return (
     <div className="w-full h-[100lvh]">
-    <div className=" container w-[90%] border-l-1 border-r-1 mx-auto md:px-13 flex flex-col  lg:mt-10 mt-40">
+    <div className=" container w-[90%] border-l border-r mx-auto md:px-13 flex flex-col  lg:mt-10 mt-40">
       
         <div className="flex justify-center">
           {" "}

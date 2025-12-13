@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { MoveRight } from "lucide-react";
-import {  motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Build from "./homepage/page";
 import MainPacked from "./comppage2/mainpacked";
 import Stack from "./comppage3/stack";
@@ -152,12 +152,12 @@ export default function Home() {
                     className={inter.className}
                     initial={{ y: 0, opacity: 1 }}
                     whileHover={{
-                      y: 20, 
+                      y: 20,
                       opacity: 0.5,
                       transition: { ease: "easeOut", duration: 0.6 },
                     }}
                     animate={{
-                      y: [-20, 0], 
+                      y: [-20, 0],
                       transition: { ease: "easeOut", duration: 0.6 },
                     }}
                   >
@@ -197,7 +197,13 @@ export default function Home() {
             </video>
 
             <button className="bg-black w-10 h-10">
-              <img src="playbutton.jpg"></img>
+<Image
+  src="/playbutton.jpg"
+  alt="Play button"
+  width={64}
+  height={64}
+  className="object-contain"
+/>
             </button>
           </motion.div>
           <div className="lg:hidden mt-20">
@@ -221,7 +227,16 @@ export default function Home() {
               transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
             >
               {slider.map((logo, index) => {
-                return <img src={logo} key={index}></img>;
+                return (
+                  <Image
+                    key={index}
+                    src={logo}
+                    alt="logo"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
+                );
               })}
             </motion.div>
             <motion.div
@@ -231,7 +246,16 @@ export default function Home() {
               transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
             >
               {slider.map((logo, index) => {
-                return <img src={logo} key={index}></img>;
+                return (
+                  <Image
+                    key={index}
+                    src={logo}
+                    alt="logo"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
+                );
               })}
             </motion.div>
           </div>

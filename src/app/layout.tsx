@@ -1,4 +1,3 @@
-import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/navcomponent/navbar";
 import DiagonalBox from "./footercomponents/footer1";
