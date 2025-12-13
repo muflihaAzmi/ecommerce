@@ -1,6 +1,6 @@
 "use client";
 import { MoveRight } from "lucide-react";
-import { delay, motion, useScroll, useTransform } from "framer-motion";
+import {  motion, useScroll, useTransform } from "framer-motion";
 import Build from "./homepage/page";
 import MainPacked from "./comppage2/mainpacked";
 import Stack from "./comppage3/stack";
@@ -10,8 +10,12 @@ import Packed from "./comppage3/packed";
 import Customer from "./comppage3/customer";
 import LeatestBlog from "./comppage3/lateastBlog";
 import ImageRow from "./comppage3/banner2";
-import Footer from "./footercomponents/footer2";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Pointer",
+};
 
 import { inter } from "./ui/font";
 import { spaceGrotesk } from "./ui/components";
@@ -108,8 +112,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full    ">
-        <div className="border-l-1  w-[90%] md:h-[200lvh] h-[100lvh] container mx-auto mt-20 lg:px-13 md:flex md:flex-row justify-between border-r-1 ">
+      <div className="w-full ">
+        <div className="border-l  w-[90%] md:h-[200lvh] h-[100lvh] container mx-auto mt-20 lg:px-13 md:flex md:flex-row justify-between border-r-1 ">
           <div className="lg:w-[70%]">
             <motion.div
               className="flex flex-row bg-white border border-gray-200 py-1 rounded-3xl  w-64 gap-1 justify-center items-center  "

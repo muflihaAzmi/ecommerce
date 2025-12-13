@@ -1,7 +1,7 @@
 import { FileText, MoveRight } from "lucide-react";
 
 import InfoCard from "./infocard";
-import React, { ReactNode } from "react";
+import React from "react";
 import { motion } from "motion/react";
 import { spaceGrotesk } from "../ui/components";
 

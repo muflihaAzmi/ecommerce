@@ -74,7 +74,7 @@ function BlogOne() {
         <div className="flex md:flex-row flex-col  gap-4 h-[450px] overflow-hidden mt-10 min-h-screen">
           <div
             onMouseEnter={() => setHovered(1)}
-            onMouseLeave={() => setHovered(null)}
+            onMouseLeave={() => setHovered(0)}
             className={`bg-cover bg-center h-[450px] 
           ${hovered === 2 ? "md:w-2/4" : "md:w-3/4"} w-full relative`}
             style={{
@@ -123,7 +123,7 @@ function BlogOne() {
 
           <div
             onMouseEnter={() => setHovered(2)}
-            onMouseLeave={() => setHovered(null)}
+            onMouseLeave={() => setHovered(0)}
             className={`bg-cover bg-center h-[450px]
           ${
             hovered === 1 || hovered === null ? "md:w-2/4" : "md:w-3/4"
