@@ -32,7 +32,7 @@ function Contactpage() {
               an honor to help you.
             </p>
           </div>
-          <div className="flex flex-row justify-between">
+          <div className="flex md:flex-row flex-col justify-between">
             <div className="text-black pt-5 flex flex-col gap-5">
               <p className="font-semibold">General enquires</p>
               <div className="flex flex-row items-center gap-4 ">
@@ -66,7 +66,7 @@ function Contactpage() {
           </div>
         </div>
 
-        <motion.div className="md:w-[700px] bg-gray-100 mt-20 h-[500px] w-full flex flex-row justify-between  ">
+        <motion.div className="md:w-[700px] bg-gray-100 mt-20 h-[500px] w-full flex md:flex-row justify-between  ">
           <form>
             <p
               className={`text-2xl text-black font-semibold flex  mt-10 px-4 tracking-tighter [word-spacing:0.01px] leading-tight md:text-center ${spaceGrotesk.className}`}
@@ -115,11 +115,12 @@ function Contactpage() {
             alt="contactgirl"
             width={300}
             height={0}
+            className="hidden md:block"
           />
         </motion.div>
          </motion.div>
       
-      <div className=" min-h-screen container mx-auto border-l-1 border-r-1">
+      <div className=" min-h-screen container mx-auto border-l-1 border-r-1 mt-120 md:mt-0 px-4">
         {" "}
         <p
           className={`md:text-6xl text-3xl font-semibold tracking-tighter  text-black  [word-spacing:0.01px] leading-tight md:text-center ${spaceGrotesk.className}`}

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { easeIn, easeInOut, easeOut, motion } from "motion/react";
+import { easeIn, motion } from "motion/react";
 import { spaceGrotesk } from "../ui/components";
 
 function ImageRow() {
@@ -11,7 +11,7 @@ function ImageRow() {
   const star = Array.from({ length: repeatCount });
 
   return (
-    <div className="  w-[90%] border-r-1 border-l-1 container mx-auto md:p-13 md:mt-10 mt-90">
+    <div className="  w-[90%] border-r border-l container mx-auto md:p-13 md:mt-10 mt-90">
       <div className="flex justify-center ">
         <p className={`text-black md:text-6xl text-3xl flex items-center  text-center font-semibold tracking-tighter [word-spacing:0.1px] leading-none ${spaceGrotesk.className} `}>
           Hear from those who matter

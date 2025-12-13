@@ -2,7 +2,7 @@
 
 import React, {  useState } from "react";
 import Marketing from "./Marketing";
-
+import Image from "next/image";
 import { spaceGrotesk } from "../ui/components";
 
 import { motion } from "motion/react";
@@ -102,11 +102,14 @@ function BlogOne() {
                 product team.
               </h1>
               <div className="flex items-center gap-3 md:mt-10">
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src="https://cdn.prod.website-files.com/67e091ded7e9762ca9dbf5f1/67e3ebbccc71de8744fd5fd9_Ellipse%206.webp"
-                  alt="Eleanor Pena"
-                />
+              <Image
+  src="https://cdn.prod.website-files.com/67e091ded7e9762ca9dbf5f1/67e3ebbccc71de8744fd5fd9_Ellipse%206.webp"
+  alt="Eleanor Pena"
+  width={40}
+  height={40}
+  className="rounded-full object-cover"
+/>
+
                 <div className="text-black flex flex-col text-sm">
                   <h1 className="font-semibold">Eleanor Pena ,</h1>
                   <h1>AI Engineer</h1>
@@ -148,11 +151,14 @@ function BlogOne() {
                 product team.
               </h1>
               <div className="flex items-center gap-3 md:mt-10">
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src="https://cdn.prod.website-files.com/67e091ded7e9762ca9dbf5f1/67e3ebbccc71de8744fd5fd9_Ellipse%206.webp"
-                  alt="Eleanor Pena"
-                />
+               <Image
+  src="https://cdn.prod.website-files.com/67e091ded7e9762ca9dbf5f1/67e3ebbccc71de8744fd5fd9_Ellipse%206.webp"
+  alt="Eleanor Pena"
+  width={40}
+  height={40}
+  className="rounded-full object-cover"
+/>
+
                 <div className="text-black flex flex-col text-sm">
                   <h1 className="font-semibold">Eleanor Pena ,</h1>
                   <h1>AI Engineer</h1>
@@ -178,7 +184,7 @@ function BlogOne() {
                 onClick={() => {
                   SetBlog("marketing");
                 }}
-                className={`border-b-1 border-gray-300  p-2 ${
+                className={`border-b border-gray-300  p-2 ${
                   Blog == "marketing"
                     ? "bg-gray-300 text-black "
                     : "text-gray-300 bg-gray-100 "
@@ -188,7 +194,7 @@ function BlogOne() {
               </button>
               <button
                 onClick={() => SetBlog("Technology")}
-                className={`border-b-1 border-gray-300 p-2 ${
+                className={`border-b border-gray-300 p-2 ${
                   Blog == "Technology"
                     ? "bg-gray-300 text-black "
                     : "text-gray-300 bg-gray-100 "
@@ -198,7 +204,7 @@ function BlogOne() {
               </button>
               <button
                 onClick={() => SetBlog("startup")}
-                className={`border-b-1  border-gray-300 p-2 ${
+                className={`border-b  border-gray-300 p-2 ${
                   Blog == "startup"
                     ? "bg-gray-300 text-black "
                     : "text-gray-300 bg-gray-100 "
@@ -208,7 +214,7 @@ function BlogOne() {
               </button>
               <button
                 onClick={() => SetBlog("Business")}
-                className={`border-b-1  border-gray-300 p-2 ${
+                className={`border-b  border-gray-300 p-2 ${
                   Blog == "Business"
                     ? "bg-gray-300 text-black "
                     : "text-gray-300 bg-gray-100 "
@@ -218,7 +224,7 @@ function BlogOne() {
               </button>
               <button
                 onClick={() => SetBlog("NEWS")}
-                className={`border-b-1   border-gray-300 p-2 ${
+                className={`border-b  border-gray-300 p-2 ${
                   Blog == "NEWS"
                     ? "bg-gray-300 text-black "
                     : "text-gray-300 bg-gray-100 "
@@ -228,7 +234,7 @@ function BlogOne() {
               </button>
               <button
                 onClick={() => SetBlog("Research")}
-                className={`border-b-1  border-gray-300 p-2 ${
+                className={`border-b  border-gray-300 p-2 ${
                   Blog == "Research"
                     ? "bg-gray-300 text-black "
                     : "text-gray-300 bg-gray-100 "
@@ -238,7 +244,7 @@ function BlogOne() {
               </button>
               <button
                 onClick={() => SetBlog("sales")}
-                className={`border-b-1   border-gray-300 p-2 ${
+                className={`border-b   border-gray-300 p-2 ${
                   Blog == "sales"
                     ? "bg-gray-300 text-black "
                     : "text-gray-300 bg-gray-100 "

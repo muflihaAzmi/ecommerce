@@ -1,5 +1,5 @@
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@radix-ui/react-collapsible'
-import { ChevronRight, ChevronsDown, MoveRight } from 'lucide-react'
+import { ChevronRight, ChevronsDown, } from 'lucide-react'
 import { motion } from 'motion/react'
 import React from 'react'
 import Image from 'next/image'
@@ -7,7 +7,7 @@ import Image from 'next/image'
 function retainers() {
   return (
     <div className='w-full'>
-          <div className=" md:px-13 mt-10 flex sm:flex-col lg:flex-row flex-col gap-4 px-10 border-l-1 border-r-1 ">
+          <div className=" md:px-13 mt-10 flex sm:flex-col lg:flex-row flex-col gap-4 px-10 border-l border-r">
         <motion.div className="md:p-8 bg-gray-100  w-full p-2"  initial={{y:40 ,opacity:0}}
         animate={{y:0,opacity:1}}
         transition={{ duration: 0.8, ease: "easeOut" }}>
@@ -44,7 +44,7 @@ function retainers() {
               </Collapsible>
 
               <Collapsible>
-                <div className="border-t-1 border-b-1 py-4 w-full border-gray-300">
+                <div className="border-t-1 border-b py-4 w-full border-gray-300">
                   <CollapsibleTrigger className="flex justify-between text-[20px] w-full">
                     <span className="text-black">Best budgets</span>
                     <ChevronsDown className="text-gray-300" />
@@ -59,7 +59,7 @@ function retainers() {
                 </div>
               </Collapsible>
               <Collapsible>
-                <div className=" border-t-1 border-b-1 py-4 w-full border-gray-300">
+                <div className=" border-t-1 border-b py-4 w-full border-gray-300">
                   <CollapsibleTrigger className="flex justify-between text-[20px] w-full">
                     <span className="text-black">Time tracking</span>
                     <ChevronsDown className="text-gray-300" />

@@ -13,27 +13,20 @@ import { motion } from "motion/react";
     });
   
     
-    function send() {
-      return (
-        <div>
-        
-        </div>
-      )
-    }
-    
+  
    
 
 function Packed() {
   return (
     <div className="w-full  ">
     <div className=" sm:mt-110 mt-80 lg:mt-10">
-      <div className="container mx-auto w-[90%] border-l-1   border-r-1 md:px-13">
+      <div className="container mx-auto w-[90%] border-l  border-r md:px-13">
         <div className="flex lg:flex-row lg:justify-between sm:flex-col w-full   flex-col  p-5">
           <h2 className={`text-black lg:text-6xl text-4xl  md:w-[600px]  font-semibold w-full tracking-tighter [word-spacing:0.1px] leading-none ${spaceGrotesk.className}`}>
             Packed with the features you need
           </h2>
           <div className="bg-black w-[220px] h-12 px-1 flex items-center rounded-3xl shadow-lg mt-4 flex-row justify-between">
-            <button className="bg-white text-black px-6 py-2 rounded-3xl font-medium shadow-md hover:shadow-lg transition-shadow"onClick={open}>
+            <button className="bg-white text-black px-6 py-2 rounded-3xl font-medium shadow-md hover:shadow-lg transition-shadow">
               Book a Demo
             </button>
             <MoveRight className="mr-4 text-white" />
@@ -75,7 +68,7 @@ function Packed() {
                 Automated Marketing
               </p>
               <p className="text-12px text-gray-700 px-2 items-center">
-                Get dedicated support anytime, anywhere.We're always ready to
+                Get dedicated support anytime, anywhere.We&apos;re always ready to
                 help.
               </p>
               <Image

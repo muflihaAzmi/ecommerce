@@ -25,7 +25,7 @@ function MainContact() {
     
   return (
     <div>
-     <div className='flex flex-row justify-between gap-8 w-[90%] md:px-13 '>
+     <div className='flex lg:flex-row md:justify-between gap-8 flex-col w-full  '>
         {contactList.map((items,index)=>(
             <Contactbutton
             key={index}

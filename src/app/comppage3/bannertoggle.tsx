@@ -2,7 +2,7 @@
 
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 interface InfoCardProps {
   logo: ReactNode;
   title: string;
@@ -121,8 +121,15 @@ function Bannertoggle() {
         {Bannerlogo.map((item, index) => (
           <Inforoll
             key={index}
-            logo={<img src={item.image} alt={item.title} className="w-12 h-12" />}
-            title={item.title}
+logo={
+  <Image
+    src={item.image}
+    alt={item.title}
+    width={48}
+    height={48}
+    className="object-contain"
+  />
+}            title={item.title}
             description={item.description}
           />
         ))}

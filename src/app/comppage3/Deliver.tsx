@@ -1,12 +1,11 @@
 import React from "react";
-import Image from "next/image";
 import { motion } from "motion/react";
-import { ChevronRight, CircleCheck, FileText, MoveRight } from "lucide-react";
+import { ChevronRight, CircleCheck, FileText, } from "lucide-react";
 
 function Deliver() {
   return (
     <div className="w-full mt-20 h-[100lvh]">
-    <div className=" container w-[90%]  border-l-1 border-r-1 mx-auto  md:px-13 flex flex-col  mt-40 md:mt-50">
+    <div className=" container w-[90%]  border-l border-r mx-auto  md:px-13 flex flex-col  mt-40 md:mt-50">
       
         
         <div className=" mt-10 p-5 md:p-0 flex sm:flex-col lg:flex-row gap-8 flex-col">
@@ -19,7 +18,7 @@ function Deliver() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className=" flex flex-col gap-8 ">
-              <div className=" border-b-1  flex flex-col gap-8 p-2 ">
+              <div className=" border-b  flex flex-col gap-8 p-2 ">
                 <div className="flex flex-row bg-white border border-gray-200 rounded-3xl w-60 gap-2 justify-center items-center ">
                   <FileText className="text-black w-3 h-3" />
                   <p className="text-black text-[15px] font-medium">

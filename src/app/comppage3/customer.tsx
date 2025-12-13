@@ -1,8 +1,10 @@
 
 "use client"
 import { motion } from "motion/react";
-import React, { useState } from "react";
+import React, { } from "react";
 import { spaceGrotesk } from "../ui/components";
+import Image from "next/image";
+
 
 import {
   Carousel,
@@ -17,7 +19,7 @@ function Customer() {
   
   return (
    <div className={`min-h-screen w-full`}>
-      <div className="w-[90%] container mx-auto  border-l-1 border-r-1 md:px-30 px-5 ">
+      <div className="w-[90%] container mx-auto  border-l border-r md:px-30 px-5 ">
         <p className={`text-black lg:text-5xl sm:text-4xl text-3xl flex justify-center items-center mt-10 font-semibold tracking-tighter [word-spacing:0.01px] leading-tight text-center ${spaceGrotesk.className}`}>
           What our customers say
         </p>
@@ -47,11 +49,14 @@ function Customer() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img
-                src="primex logo.svg"
-                className="w-[130px] h-[100px]"
-                alt="primerlogo"
-              ></img>
+           <Image
+  src="/primex logo.svg"
+  alt="Primex logo"
+  width={130}
+  height={100}
+  className="object-contain"
+/>
+
             <p className="text-black mt-10 font-semibold md:text-3xl text-xl ">
               Pointer has been a great tool for our businesses. We wanted to
               find an all in one solution that was seam for clients to use and
@@ -87,11 +92,14 @@ function Customer() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-             <img
-                src="primex logo.svg"
-                className="w-[130px] h-[100px]"
-                alt="primerlogo"
-              ></img>
+            <Image
+  src="/primex logo.svg"
+  alt="Primex logo"
+  width={130}
+  height={100}
+  className="object-contain"
+/>
+
             <p className="text-black mt-10 font-semibold md:text-3xl text-xl ">
               Pointer has been a great tool for our businesses. We wanted to
               find an all in one solution that was seam for clients to use and

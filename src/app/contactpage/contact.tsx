@@ -7,10 +7,11 @@ import {
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 import { spaceGrotesk } from "../ui/components";
+import Image from "next/image";
 
 function Contactquestions() {
   return (
-    <motion.div className="container mx-auto w-[90%] border-l-1 border-r-1 md:px-13 h-[100lvh] mt-50 lg:mt-10  px-5">
+    <motion.div className="container mx-auto w-[90%] border-l border-r md:px-13 h-[100lvh] mt-50 lg:mt-10  px-5">
       <div>
         <h1 className={`text-black md:text-6xl font-semibold text-3xl tracking-tighter [word-spacing:0.01px] leading-tight  ${spaceGrotesk.className}`}>
           Frequently asked questions
@@ -22,14 +23,18 @@ function Contactquestions() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4 }}
           >
-            <img
-              src="redflag.avif"
-              alt=""
-            ></img>
+            <Image
+  src="/redflag.avif"
+  alt=""
+  width={300}
+  height={200}
+  className="object-contain"
+/>
+
           </motion.div>
           <div className=" flex flex-col text-black lg:w-3/4 justify-center py-4 md:px-10 px-5 gap-4 font-semibold w-full ">
             <motion.div
-              className="border-b-1 text-gray-200 pb-10 "
+              className="border-b text-gray-200 pb-10 "
               initial={{y:20, visibility:"hidden",opacity: 0 }}
               whileInView={{ y:0,visibility:"visible", opacity: 1 }}
               transition={{ duration: 0.8}}
@@ -51,7 +56,7 @@ function Contactquestions() {
             </motion.div>
 
             <motion.div
-              className="border-b-1 text-gray-200 pb-10"
+              className="border-b text-gray-200 pb-10"
               initial={{y:20, visibility:"hidden",opacity: 0 }}
               whileInView={{ y:0,visibility:"visible", opacity: 1 }}
               transition={{ duration: 0.8}}
@@ -72,7 +77,7 @@ function Contactquestions() {
               </Collapsible>
             </motion.div>
 
-            <motion.div className="border-b-1 text-gray-200 pb-10"
+            <motion.div className="border-b text-gray-200 pb-10"
            initial={{y:20, visibility:"hidden",opacity: 0 }}
               whileInView={{ y:0,visibility:"visible", opacity: 1 }}
               transition={{ duration: 0.8}}>
@@ -92,7 +97,7 @@ function Contactquestions() {
               </Collapsible>
             </motion.div>
 
-            <motion.div className="border-b-1 text-gray-200 pb-10"
+            <motion.div className="border-b text-gray-200 pb-10"
              initial={{y:20, visibility:"hidden",opacity: 0 }}
               whileInView={{ y:0,visibility:"visible", opacity: 1 }}
               transition={{ duration: 0.8}}>
@@ -112,7 +117,7 @@ function Contactquestions() {
               </Collapsible>
             </motion.div>
 
-            <motion.div className="border-b-1 text-gray-200 pb-10"
+            <motion.div className="border-b text-gray-200 pb-10"
            initial={{y:20, visibility:"hidden",opacity: 0 }}
               whileInView={{ y:0,visibility:"visible", opacity: 1 }}
               transition={{ duration: 0.8}}>
