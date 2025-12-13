@@ -1,4 +1,4 @@
-"use client";
+
 import { MoveRight } from "lucide-react";
 import {  motion, useScroll, useTransform } from "framer-motion";
 import Build from "./homepage/page";
