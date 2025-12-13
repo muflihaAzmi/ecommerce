@@ -1,4 +1,4 @@
-
+"use client"
 import { MoveRight } from "lucide-react";
 import {  motion, useScroll, useTransform } from "framer-motion";
 import Build from "./homepage/page";
@@ -11,11 +11,11 @@ import Customer from "./comppage3/customer";
 import LeatestBlog from "./comppage3/lateastBlog";
 import ImageRow from "./comppage3/banner2";
 import Image from "next/image";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About | Pointer",
-};
+// export const metadata: Metadata = {
+//   title: "About | Pointer",
+// };
 
 import { inter } from "./ui/font";
 import { spaceGrotesk } from "./ui/components";
