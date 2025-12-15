@@ -5,7 +5,7 @@ import { MoveRight } from "lucide-react";
 
 export default function DiagonalBox() {
   return (
-    <div className=" container mx-auto lg:px-13 min-h-screen w-[90%] border-l-1 border-r-1 sm:mt-40 mt-80 lg:mt-0 px-2 lg:mt-30 ">
+    <div className=" container mx-auto lg:px-13 min-h-screen w-[90%] border-l border-r sm:mt-40 mt-80  px-2 lg:mt-30 ">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}

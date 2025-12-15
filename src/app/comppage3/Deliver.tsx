@@ -4,7 +4,7 @@ import { ChevronRight, CircleCheck, FileText, } from "lucide-react";
 
 function Deliver() {
   return (
-    <div className="w-full mt-20 h-[100lvh]">
+    <div className="w-full mt-20 h-lvh">
     <div className=" container w-[90%]  border-l border-r mx-auto  md:px-13 flex flex-col  mt-40 md:mt-50">
       
         

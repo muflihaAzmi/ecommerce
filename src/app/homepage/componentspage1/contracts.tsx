@@ -1,16 +1,23 @@
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@radix-ui/react-collapsible'
-import { ChevronRight, ChevronsDown, MoveRight } from 'lucide-react'
-import { motion } from 'motion/react'
-import React from 'react'
-import Image from 'next/image'
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@radix-ui/react-collapsible";
+import { ChevronRight, ChevronsDown,  } from "lucide-react";
+import { motion } from "motion/react";
+import React from "react";
+import Image from "next/image";
 
 function Contracts() {
   return (
-    <div className='w-full '>
-         <div className="md:px-13 border-l-1 border-r-1  px-5 flex sm:flex-col lg:flex-row flex-col gap-4 mt-10   ">
-        <motion.div className="md:p-8 bg-gray-100 w-full p-2"  initial={{y:40 ,opacity:0}}
-        animate={{y:0,opacity:1}}
-        transition={{ duration: 0.8, ease: "easeOut" }}>
+    <div className="w-full ">
+      <div className="md:px-13 border-l border-r  px-5 flex sm:flex-col lg:flex-row flex-col gap-4 mt-10   ">
+        <motion.div
+          className="md:p-8 bg-gray-100 w-full p-2"
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <div className="w-full  flex flex-col  gap-4  ">
             <span className="text-black font-semibold text-[28px]">
               Commercial and specialty insurers
@@ -26,7 +33,7 @@ function Contracts() {
               </button>
               <ChevronRight className="mr-4 text-black" />
             </div>
-            <div  className="mt-15">
+            <div className="mt-15">
               <Collapsible>
                 <div className=" border-t-2 border-b-2 py-4 w-full">
                   <CollapsibleTrigger className="flex justify-between text-[20px] w-full ">
@@ -44,7 +51,7 @@ function Contracts() {
               </Collapsible>
 
               <Collapsible>
-                <div className="border-t-1 border-b-1 py-4 w-full border-gray-300">
+                <div className="border-t border-b py-4 w-full border-gray-300">
                   <CollapsibleTrigger className="flex justify-between text-[20px] w-full">
                     <span className="text-black">Best budgets</span>
                     <ChevronsDown className="text-gray-300" />
@@ -59,7 +66,7 @@ function Contracts() {
                 </div>
               </Collapsible>
               <Collapsible>
-                <div className=" border-t-1 border-b-1 py-4 w-full border-gray-300">
+                <div className=" border-t border-b py-4 w-full border-gray-300">
                   <CollapsibleTrigger className="flex justify-between text-[20px] w-full">
                     <span className="text-black">Time tracking</span>
                     <ChevronsDown className="text-gray-300" />
@@ -80,20 +87,22 @@ function Contracts() {
           className=" w-full relative z-0 "
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{  duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <Image
-            src ="/contract.avif"
-            alt="contracts"
-             width={600} height={0} 
-          />
-          <div className='absolute bottom-40 left-60 z-10'><img src="ovaroll.svg" alt=""></img></div>
-
-            
+          <Image src="/contract.avif" alt="contracts" width={600} height={0} />
+          <div className="absolute bottom-40 left-60 z-10">
+            <Image
+              src="/ovaroll.svg"
+              alt=""
+              width={120}
+              height={40}
+              className="object-contain"
+            />
+          </div>
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Contracts
+export default Contracts;

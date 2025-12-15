@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Poppins } from "next/font/google";
 import Proposals from "./componentspage1/proposol";
 import Contracts from "./componentspage1/contracts";
 import Retainers from "./componentspage1/retainers";
@@ -18,7 +17,7 @@ function Build() {
   const [Currentpage, setCurrentpage] = useState("proposals");
 
   return (
-    <div className="w-full h-[100lvh] mt-20">
+    <div className="w-full h-lvh mt-20">
       <div className=" container mx-auto w-[90%]  ">
         <div className="flex justify-center  ">
           <p className={`text-black  md:text-6xl text-4xl tracking-tighter [word-spacing:0.01px] leading-tight text-center font-semibold ${spaceGrotesk.className}`}>

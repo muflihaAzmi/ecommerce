@@ -58,7 +58,7 @@ function MainPacked() {
   ];
   return (
     <div className="w-full ">
-      <div className=" container w-[90%] lg:mt-70 border-l-1  border-r-1 mx-auto md:px-13 min-h-screen mt-150  flex flex-col gap-16 ">
+      <div className=" container w-[90%] lg:mt-70 border-l  border-r mx-auto md:px-13 min-h-screen mt-150  flex flex-col gap-16 ">
         <div className="flex  md:justify-between sm:flex-col lg:flex-row flex-col p-5">
           <h2 className={`text-black lg:text-6xl sm:text-4xl text-2xl tracking-tighter md:w-[500px] font-semibold [word-spacing:0.1px] leading-tight ${spaceGrotesk.className} `}>
             Packed with the features you need

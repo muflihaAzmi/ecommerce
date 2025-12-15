@@ -13,7 +13,7 @@ function Proposals() {
 
   return (
     <div className="w-full">
-      <div className=" min-h-screen md:px-13 border-l mt-10 flex lg:flex-row md:justify-center sm:flex-col flex-col gap-4 px-5 border-r-1 ">
+      <div className=" min-h-screen md:px-13 border-l mt-10 flex lg:flex-row md:justify-center sm:flex-col flex-col gap-4 px-5 border-r ">
         <motion.div
           className="md:p-8 bg-gray-100 h-[650px] w-full p-2"
           initial={{ opacity: 0, y: 50 }}
@@ -66,7 +66,7 @@ function Proposals() {
               </Collapsible>
 
               <Collapsible>
-                <div className="border-t-1 border-b py-4 w-full border-gray-300">
+                <div className="border-t border-b py-4 w-full border-gray-300">
                   <CollapsibleTrigger className="flex justify-between text-[20px] w-full font-semibold">
                     <span className="text-black ">Best budgets</span>
                     <ChevronsDown className="text-gray-300" />
@@ -81,7 +81,7 @@ function Proposals() {
                 </div>
               </Collapsible>
               <Collapsible>
-                <div className=" border-t-1 border-b py-4 w-full border-gray-300">
+                <div className=" border-t border-b py-4 w-full border-gray-300">
                   <CollapsibleTrigger className="flex justify-between text-[20px] w-full font-semibold">
                     <span className="text-black">Time tracking</span>
                     <ChevronsDown className="text-gray-300" />

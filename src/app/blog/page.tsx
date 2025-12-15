@@ -65,7 +65,7 @@ function BlogOne() {
 
   return (
     <div className="w-full ">
-      <div className="w-[90%] md:px-13 mt-10 container mx-auto border-l-1 border-r-1  ">
+      <div className="w-[90%] md:px-13 mt-10 container mx-auto border-l border-r ">
         <h1
           className={`text-black text-6xl flex justify-center mt-10 tracking-tighter [word-spacing:0.01px] leading-tight ${spaceGrotesk.className}`}
         >

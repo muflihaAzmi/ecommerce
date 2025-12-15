@@ -53,7 +53,7 @@ function AnimatedCounter({ value }: { value: string }) {
         const initialY = scrollTopToBottom ? 1 : -(numbersToRender.length - 1) * 3.5;
 
         return (
-          <div key={idx} className="relative h-[3.5rem] w-[2.5rem] overflow-hidden  ">
+          <div key={idx} className="relative h-14 w-10 overflow-hidden  ">
             <motion.div
               initial={{ y: `${initialY}rem` }}
               animate={{ y: `${finalY}rem` }}
@@ -65,7 +65,7 @@ function AnimatedCounter({ value }: { value: string }) {
               {numbersToRender.map((n, i) => (
                 <div 
                   key={i} 
-                  className="h-[3.5rem] flex items-center justify-center"
+                  className="h-14 flex items-center justify-center"
                 >
                   {n}
                 </div>

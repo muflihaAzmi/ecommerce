@@ -5,7 +5,7 @@ import { spaceGrotesk } from "../ui/components";
 
 function Stack() {
   return (
-    <div className="w-full h-[100lvh]">
+    <div className="w-full h-lvh">
     <div className=" container w-[90%] border-l border-r mx-auto md:px-13 flex flex-col  lg:mt-10 mt-40">
       
         <div className="flex justify-center">
@@ -34,7 +34,7 @@ function Stack() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className="md:p-10 flex flex-col gap-8 mt-10 md:mt-0 ">
-              <div className=" border-b-1  flex flex-col gap-8 p-2 ">
+              <div className=" border-b  flex flex-col gap-8 p-2 ">
                 <div className="flex flex-row bg-white border border-gray-200 rounded-3xl w-60 gap-2 justify-center items-center ">
                   <FileText className="text-black w-3 h-3" />
                   <p className="text-black text-[15px] font-medium">

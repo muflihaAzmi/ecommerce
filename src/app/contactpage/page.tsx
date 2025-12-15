@@ -11,16 +11,16 @@ import MainContact from "./mainContact";
 function Contactpage() {
   return (
     <div className="w-full lg:mt-10">
-      <div className="container mx-auto w-[90%] border-r-1 border-l-1">
+      <div className="container mx-auto w-[90%] border-r border-l">
       <motion.div
-        className="h-[100lvh]  md:px-13 flex  sm:flex-col lg:flex-row  flex-col px-5 justify-between"
+        className="h-lvh  md:px-13 flex  sm:flex-col lg:flex-row  flex-col px-5 justify-between"
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, amount: 0.6 }}
       >
         <div className="lg:w-1/3 mt-20 w-full px-2 ">
-          <div className="text-black flex flex-col border-b-1 border-gray-300 pb-5 gap-4">
+          <div className="text-black flex flex-col border-b border-gray-300 pb-5 gap-4">
             <h1
               className={`md:text-6xl text-3xl font-semibold tracking-tighter [word-spacing:0.01px] leading-tight md:text-center ${spaceGrotesk.className}`}
             >
@@ -36,11 +36,14 @@ function Contactpage() {
             <div className="text-black pt-5 flex flex-col gap-5">
               <p className="font-semibold">General enquires</p>
               <div className="flex flex-row items-center gap-4 ">
-                <img
-                  className="rounded-full w-[50px]"
-                  src="contactus.avif"
-                  alt=""
-                ></img>
+                <Image
+  src="/contactus.avif"
+  alt=""
+  width={50}
+  height={50}
+  className="rounded-full object-cover"
+/>
+
                 <div className="flex-col items-center">
                   <p>Bessie Cooper</p>
                   <p className="text-gray-700">Marketing Coordinator</p>
@@ -120,7 +123,7 @@ function Contactpage() {
         </motion.div>
          </motion.div>
       
-      <div className=" min-h-screen container mx-auto border-l-1 border-r-1 mt-120 md:mt-0 px-4">
+      <div className=" min-h-screen container mx-auto border-l border-r mt-120 md:mt-0 px-4">
         {" "}
         <p
           className={`md:text-6xl text-3xl font-semibold tracking-tighter  text-black  [word-spacing:0.01px] leading-tight md:text-center ${spaceGrotesk.className}`}

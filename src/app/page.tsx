@@ -113,7 +113,7 @@ export default function Home() {
   return (
     <>
       <div className="w-full ">
-        <div className="border-l  w-[90%] md:h-[200lvh] h-[100lvh] container mx-auto mt-20 lg:px-13 md:flex md:flex-row justify-between border-r-1 ">
+        <div className="border-l  w-[90%] md:h-[200lvh] h-lvh container mx-auto mt-20 lg:px-13 md:flex md:flex-row justify-between border-r ">
           <div className="lg:w-[70%]">
             <motion.div
               className="flex flex-row bg-white border border-gray-200 py-1 rounded-3xl  w-64 gap-1 justify-center items-center  "
@@ -221,7 +221,7 @@ export default function Home() {
         <div className="container mx-auto mygradient overflow-hidden   w-[85%] mt-20">
           <div className="flex justify-center gap-9 ">
             <motion.div
-              className="flex flex-shrink-0 h-[50px] gap-9 justify-center   "
+              className="flex shrink-0 h-[50px] gap-9 justify-center   "
               initial={{ x: 0 }}
               animate={{ x: "-50%" }}
               transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
@@ -240,7 +240,7 @@ export default function Home() {
               })}
             </motion.div>
             <motion.div
-              className="flex flex-shrink-0 h-[50px] gap-9 justify-center  "
+              className="flex shrink-0 h-[50px] gap-9 justify-center  "
               initial={{ x: 0 }}
               animate={{ x: "-50%" }}
               transition={{ duration: 80, repeat: Infinity, ease: "linear" }}

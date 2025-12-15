@@ -19,7 +19,7 @@ const send=()=>{
 }
   return (
     <div className="md:w-full relative">
-    <nav className=" bg-white container w-[88%] mx-auto h-[70px]   flex justify-between  border-b-1">
+    <nav className=" bg-white container w-[88%] mx-auto h-[70px]   flex justify-between  border-b">
      
       <div className="flex  items-center  gap-2">
         <Image src="/pointersy.svg" alt="pointer logo" width={30} height={0} />

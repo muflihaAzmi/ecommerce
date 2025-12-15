@@ -1,14 +1,13 @@
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@radix-ui/react-collapsible'
-import { ChevronRight, ChevronsDown, MoveRight } from 'lucide-react'
+import { ChevronRight, ChevronsDown, } from 'lucide-react'
 import { motion } from 'motion/react'
 import React from 'react'
 import Image from 'next/image'
-import { once } from 'events'
 
 function meetings() {
   return (
     <div className='w-full'>
-        <div className="md:px-13 border-l-1 border-r-1 mt-10 flex lg:flex-row sm:flex-col flex-col gap-4 px-10 ">
+        <div className="md:px-13 border-l border-r mt-10 flex lg:flex-row sm:flex-col flex-col gap-4 px-10 ">
         <motion.div className="md:p-8 bg-gray-100  w-full p-2"  initial={{y:40 ,opacity:0}}
         animate={{y:0,opacity:1}}
         transition={{ duration: 0.8, ease: "easeOut" }}>
@@ -45,7 +44,7 @@ function meetings() {
               </Collapsible>
 
               <Collapsible>
-                <div className="border-t-1 border-b-1 py-4 w-full border-gray-300">
+                <div className="border-t border-b py-4 w-full border-gray-300">
                   <CollapsibleTrigger className="flex justify-between text-[20px] w-full">
                     <span className="text-black">Best budgets</span>
                     <ChevronsDown className="text-gray-300" />
@@ -60,7 +59,7 @@ function meetings() {
                 </div>
               </Collapsible>
               <Collapsible>
-                <div className=" border-t-1 border-b-1 py-4 w-full border-gray-300">
+                <div className=" border-t border-b py-4 w-full border-gray-300">
                   <CollapsibleTrigger className="flex justify-between text-[20px] w-full">
                     <span className="text-black">Time tracking</span>
                     <ChevronsDown className="text-gray-300" />
@@ -88,7 +87,14 @@ function meetings() {
             alt="meeting"
             width={600} height={0} 
           />
-          <div className='absolute bottom-40 left-60 z-10'><img src="meetinglogo.svg" alt=""></img></div>
+          <div className='absolute bottom-40 left-60 z-10'>
+            <Image
+  src="/meetinglogo.svg"
+  alt=""
+  width={120}
+  height={40}
+  className="object-contain"
+/></div>
 
         </motion.div>
       </div>
