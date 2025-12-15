@@ -113,7 +113,7 @@ export default function Home() {
   return (
     <>
       <div className="w-full ">
-        <div className="border-l  w-[90%] md:h-[200lvh] h-lvh container mx-auto mt-20 lg:px-13 md:flex md:flex-row justify-between border-r ">
+        <div className="border-l  w-[90%] md:h-[200lvh] h-lvh container mx-auto mt-20 px-2 lg:px-13 md:flex md:flex-row justify-between border-r ">
           <div className="lg:w-[70%]">
             <motion.div
               className="flex flex-row bg-white border border-gray-200 py-1 rounded-3xl  w-64 gap-1 justify-center items-center  "
