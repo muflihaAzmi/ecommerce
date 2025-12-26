@@ -17,7 +17,7 @@ function Stack() {
         <div className=" mt-10 p-5 flex sm:flex-col lg:flex-row  flex-col">
           <div className="w-full  h-[500px] ">
             <motion.img
-              src="deliver.avif"
+              src="/Deliver.avif"
               alt="Reveal"
               className="w-[550px] h-[500px] object-cover origin-top  shadow-lg"
               initial={{ scaleY: 0, opacity: 0 }}
