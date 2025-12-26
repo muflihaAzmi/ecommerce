@@ -2,12 +2,20 @@ import "./globals.css";
 import Navbar from "@/app/navcomponent/navbar";
 import DiagonalBox from "./footercomponents/footer1";
 import Footer from "./footercomponents/footer2";
-import { Inter } from 'next/font/google';
+import { Inter, Space_Grotesk } from "next/font/google";
 import type { Metadata } from "next";
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-space",
 });
 
 export const metadata: Metadata = {
@@ -18,18 +26,21 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-     
-      <body className={inter.className }> <Navbar />{children} <DiagonalBox></DiagonalBox> <Footer/></body>
-
+      <body
+        className={`${inter.variable} ${spaceGrotesk.variable}`}
+      >
+        <Navbar />
+        {children}
+        <DiagonalBox />
+        <Footer />
+      </body>
     </html>
   );
 }
